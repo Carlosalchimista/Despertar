@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REINVENTA TU SER – Consciencia con Amor</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --p:#5b2d8e;
+  --pd:#2d1654;
+  --pl:#7c4db8;
+  --pbg:#f3eef8;
+  --pborder:#ddd0f0;
+  --gold:#f5c518;
+  --white:#fff;
+  --text:#1a0e2e;
+  --soft:#5a4a7a;
+}
+body{font-family:"Inter",sans-serif;color:var(--text);overflow-x:hidden;background:#fff}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 28px 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("https://cdn.abacus.ai/images/d4283472-3c78-42c1-9a91-046857a6fa33.jpg") center/cover no-repeat}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(160deg,#2d1654 0%,#3d1a7a 50%,#2a1050 100%);opacity:.93}
+.hero>*{position:relative;z-index:2}
+.logo{margin-bottom:32px}
+.logo img{width:88px;height:88px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);border-radius:30px;padding:9px 22px;font-size:.85rem;margin-bottom:44px}
+.hero-q{color:rgba(255,255,255,.85);font-size:clamp(1rem,3vw,1.3rem);max-width:580px;line-height:1.65;margin-bottom:6px}
+.hero-q em{color:var(--gold);font-style:normal;font-weight:600}
+.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.5rem,11vw,5.8rem);font-weight:700;color:#fff;line-height:.95;letter-spacing:-2px;margin:14px 0 22px}
+.hero-h1 span{color:var(--gold)}
+.hero-tag{color:rgba(255,255,255,.65);font-size:clamp(.95rem,2.5vw,1.1rem);max-width:440px;line-height:1.7;margin-bottom:14px}
+.hero-desc{color:rgba(255,255,255,.5);font-size:.9rem;max-width:420px;line-height:1.9;margin-bottom:48px}
+.hero-desc strong{color:var(--gold);font-weight:600}
+
+/* BOTTONI */
+.btn-gold{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--pd);font-weight:700;font-size:.95rem;padding:17px 36px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(245,197,24,.45)}
+.btn-purple{display:inline-flex;align-items:center;gap:10px;background:var(--p);color:#fff;font-weight:700;font-size:.95rem;padding:17px 36px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn-purple:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(91,45,142,.4)}
+
+/* PRICE BAND */
+.pband{background:var(--p);text-align:center;padding:26px}
+.pband .pt{font-family:"Playfair Display",serif;font-size:2.4rem;font-weight:700;color:var(--gold)}
+.pband .ar{color:rgba(255,255,255,.5);font-size:1.4rem;margin-top:6px}
+
+/* LAYOUT */
+.sw{background:#fff;padding:80px 28px}
+.sp{background:var(--pbg);padding:80px 28px}
+.inner{max-width:680px;margin:0 auto}
+.inner-c{max-width:680px;margin:0 auto;text-align:center}
+h2{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,5.5vw,2.7rem);color:var(--pd);margin-bottom:36px;line-height:1.2}
+
+/* CHECKLIST */
+.cl{list-style:none;display:flex;flex-direction:column;gap:14px}
+.cl li{display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid var(--pborder);border-radius:16px;padding:18px 22px;font-size:1rem;color:var(--text);line-height:1.4;box-shadow:0 2px 12px rgba(91,45,142,.06)}
+.ci{width:36px;height:36px;min-width:36px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;font-weight:700}
+
+/* CTA VIOLA MID */
+.ctab{background:var(--p);text-align:center;padding:60px 28px}
+.ctab h3{font-family:"Playfair Display",serif;font-size:2rem;color:#fff;margin-bottom:8px}
+.ctab .sub{color:rgba(255,255,255,.65);margin-bottom:8px}
+.ctab .pr{font-family:"Playfair Display",serif;font-size:2.4rem;font-weight:700;color:var(--gold);margin-bottom:30px;display:block}
+
+/* PILLARS */
+.pillars{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.pill{background:#fff;border:1.5px solid var(--pborder);border-radius:18px;padding:30px 24px;text-align:center;box-shadow:0 2px 16px rgba(91,45,142,.07)}
+.pico{width:58px;height:58px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem}
+.pill h4{font-family:"Playfair Display",serif;font-size:1.2rem;color:var(--pd);margin-bottom:5px}
+.pill p{color:var(--soft);font-size:.9rem}
+.quote{margin-top:44px;padding:34px 28px;background:var(--pbg);border-radius:18px;font-family:"Playfair Display",serif;font-size:clamp(1.1rem,3vw,1.4rem);color:var(--pd);font-style:italic;line-height:1.6;text-align:center}
+
+/* HIGHLIGHT ORO */
+.hbox{background:var(--gold);border-radius:20px;padding:38px 30px;margin-top:38px;text-align:center}
+.hbox h3{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,4.5vw,2rem);color:var(--pd);margin-bottom:14px;line-height:1.25}
+.hbox p{color:var(--pd);font-size:1rem;line-height:1.75}
+
+/* TERESA */
+.t-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;margin:0 auto 32px;border:4px solid var(--pborder);box-shadow:0 10px 40px rgba(91,45,142,.15)}
+.t-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.t-role{color:var(--p);font-size:.95rem;margin-bottom:32px}
+.teresa-txt p{color:var(--soft);font-size:1rem;line-height:1.9;margin-bottom:14px}
+.teresa-txt p strong{color:var(--pd)}
+
+/* BPR BANNER — viola dolce */
+.bpr-ban{background:var(--p);border-radius:22px;padding:46px 30px;text-align:center;margin-top:44px}
+.bpr-ban h3{font-family:"Playfair Display",serif;font-size:2.2rem;color:#fff;margin-bottom:8px}
+.bpr-ban .bs{color:rgba(255,255,255,.65);margin-bottom:18px}
+.bpr-ban p{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.75}
+
+/* BPR CARDS — viola dolce */
+.bpr-sec{background:var(--p);padding:60px 28px}
+.bpr-sec h2{color:#fff}
+.bpr-sec .ms{color:rgba(255,255,255,.6);margin-bottom:44px;text-align:center}
+.bcards{display:flex;flex-direction:column;gap:18px;max-width:680px;margin:0 auto}
+.bcard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:28px 24px;display:flex;gap:20px;align-items:flex-start;text-align:left}
+.bl{width:52px;height:52px;min-width:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:700;color:var(--pd)}
+.bcard h4{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:7px}
+.bcard p{color:rgba(255,255,255,.65);font-size:.9rem;line-height:1.65}
+
+/* QUE VIVIRÁS — bianco */
+.qvs{background:#fff;padding:60px 28px}
+
+/* STAGES — card viola dolce */
+.simg{width:100%;border-radius:20px;max-height:240px;object-fit:cover;margin-bottom:38px;display:block}
+.stage{background:var(--p);border-radius:22px;padding:30px 26px;margin-bottom:20px}
+.snt{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.sn{width:44px;height:44px;min-width:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--pd);font-size:1.15rem}
+.stage h3{color:#fff;font-size:1.1rem;font-weight:700;line-height:1.3}
+.stag{color:rgba(255,255,255,.65);font-size:.9rem;margin-bottom:16px;font-style:italic}
+.albl{color:rgba(255,255,255,.45);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+.stage ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.stage ul li{color:rgba(255,255,255,.85);font-size:.92rem;padding-left:22px;position:relative;line-height:1.55}
+.stage ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.7rem;top:4px}
+.tbox{background:rgba(255,255,255,.12);border-radius:12px;padding:14px 18px;font-size:.87rem;color:rgba(255,255,255,.75);line-height:1.65}
+.tbox strong{color:var(--gold)}
+
+/* 90 DAYS */
+.c90{background:var(--pbg);padding:80px 28px;text-align:center}
+.c90-in{max-width:620px;margin:0 auto}
+.cimg{width:100%;border-radius:20px;max-height:250px;object-fit:cover;margin-bottom:38px;display:block}
+.c90 h2{margin-bottom:14px}
+.c90 .cs{color:var(--soft);font-size:1rem;line-height:1.65;margin-bottom:38px;max-width:460px;margin-left:auto;margin-right:auto}
+.rbox{background:#fff;border-radius:20px;padding:32px 26px;box-shadow:0 6px 28px rgba(91,45,142,.1)}
+.rbox h4{color:var(--pd);font-weight:700;margin-bottom:18px;font-size:1.05rem}
+.rbox ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.rbox ul li{display:flex;gap:12px;align-items:center;font-size:.95rem;color:var(--text);text-align:left}
+.rbox ul li::before{content:"⚡";flex-shrink:0;color:var(--gold);font-size:1.1rem}
+
+/* DESPUÉS — icone viola DOLCE */
+.after-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.after-list li{display:flex;align-items:center;gap:18px;padding:20px 22px;background:#fff;border:1.5px solid var(--pborder);border-radius:16px;font-size:1rem;color:var(--text);font-weight:600;line-height:1.3;box-shadow:0 2px 12px rgba(91,45,142,.06)}
+.aico{width:50px;height:50px;min-width:50px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+
+/* FINAL CTA — viola dolce */
+.fcta{background:var(--p);text-align:center;padding:70px 28px}
+.fcta h2{color:#fff;margin-bottom:10px}
+.fcta p{color:rgba(255,255,255,.75);font-size:1rem;line-height:1.65;margin-bottom:8px;max-width:440px;margin-left:auto;margin-right:auto}
+.fcta .fp{font-family:"Playfair Display",serif;font-size:2.5rem;font-weight:700;color:var(--gold);margin:22px 0 30px;display:block}
+
+/* FAQ */
+.faq{max-width:680px;margin:0 auto;padding:80px 28px}
+.faq h2{text-align:center;margin-bottom:38px}
+.fi{border:1.5px solid var(--pborder);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.fq{width:100%;background:#fff;border:none;padding:20px 24px;text-align:left;font-size:.96rem;font-weight:600;color:var(--pd);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:"Inter",sans-serif}
+.fq::after{content:"∨";font-size:1.15rem;transition:transform .25s;color:var(--p)}
+.fq.open::after{transform:rotate(180deg)}
+.fa{display:none;padding:0 24px 20px;color:var(--soft);font-size:.92rem;line-height:1.8;background:#fff}
+.fa.open{display:block}
+
+/* CLOSING */
+.clos-wrap{background:#fff;padding:80px 28px;text-align:center}
+.clos{max-width:580px;margin:0 auto}
+.clos p{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,5vw,2.1rem);color:var(--pd);font-style:italic;line-height:1.5;margin-bottom:14px}
+.clos .hl{color:var(--p)}
+.clos .tl{color:var(--gold);font-style:italic}
+.closbox{background:var(--gold);border-radius:22px;padding:46px 30px;margin-top:44px;max-width:580px;margin-left:auto;margin-right:auto}
+.closbox p{color:var(--pd);font-family:"Playfair Display",serif;font-size:1.2rem;font-style:italic;margin-bottom:28px;line-height:1.5}
+
+/* FOOTER */
+footer{background:var(--pd);padding:60px 28px;text-align:center}
+.fl img{width:72px;height:72px;border-radius:12px;margin-bottom:16px}
+.fl span{display:block;font-family:"Playfair Display",serif;font-size:1.4rem;color:#fff}
+.fl small{color:rgba(255,255,255,.5);font-size:.85rem}
+footer a{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:.9rem;margin:20px 0 28px;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.disc{color:rgba(255,255,255,.35);font-size:.78rem;max-width:480px;margin:0 auto 16px;line-height:1.75}
+.copy{color:rgba(255,255,255,.2);font-size:.78rem}
+
+@media(min-width:580px){.pillars{flex-direction:row}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-ov"></div>
+  <div class="logo"><img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Logo"></div>
+  <div class="badge">⏱ Próximamente</div>
+  <p class="hero-q">¿Te imaginas cómo sería tu vida si dejaras de sentirte sola… <em>incluso cuando estás contigo misma?</em></p>
+  <h1 class="hero-h1"><span>REINVENTA</span><br>TU SER</h1>
+  <p class="hero-tag">Conecta contigo misma para no sentirte sola nunca más</p>
+  <p class="hero-desc">Un viaje profundo de <strong>90 días</strong> a través del <strong>Método B.P.R.</strong> para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
+  <a href="#inscripcion" class="btn-gold">💬 QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
+</section>
+
+<!-- PRICE -->
+<div class="pband"><div class="pt">Solo 47€</div><div class="ar">↓</div></div>
+
+<!-- PARA TI SI — bianco -->
+<div class="sw"><div class="inner">
+  <h2>Este proceso es para ti si…</h2>
+  <ul class="cl">
+    <li><span class="ci">✓</span>Te sientes sola incluso estando acompañada</li>
+    <li><span class="ci">✓</span>Te cuesta poner límites y terminas complaciendo a los demás</li>
+    <li><span class="ci">✓</span>Sientes que no eres suficiente</li>
+    <li><span class="ci">✓</span>Repites relaciones o situaciones que te drenan</li>
+    <li><span class="ci">✓</span>Tu cuerpo expresa lo que no logras decir</li>
+    <li><span class="ci">✓</span>Sabes que hay algo más en ti… pero no sabes cómo acceder</li>
+  </ul>
+</div></div>
+
+<!-- CTA MID -->
+<div class="ctab" id="inscripcion">
+  <h3>REINVENTA TU SER</h3>
+  <p class="sub">Asegura tu lugar hoy</p>
+  <span class="pr">Solo 47€</span>
+  <a href="#" class="btn-gold">💬 QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
+</div>
+
+<!-- NOT MOTIVATION — lavanda -->
+<div class="sp"><div class="inner">
+  <h2>Esto no es otro curso de motivación.</h2>
+  <p style="color:var(--soft);font-size:1.05rem;line-height:1.8;margin-bottom:36px">Es un proceso estructurado donde vas a trabajar en tres niveles fundamentales de tu ser:</p>
+  <div class="pillars">
+    <div class="pill"><div class="pico">❤️</div><h4>Tu cuerpo</h4><p>(biología)</p></div>
+    <div class="pill"><div class="pico">🧠</div><h4>Tu mente</h4><p>(programación)</p></div>
+    <div class="pill"><div class="pico">✨</div><h4>Tu intuición</h4><p>(conexión interna)</p></div>
+  </div>
+  <div class="quote">Porque no puedes cambiar tu vida… si no cambias lo que la está creando desde dentro.</div>
+</div></div>
+
+<!-- YEARS — bianco -->
+<div class="sw"><div class="inner">
+  <h2>Durante años has intentado sentirte mejor…</h2>
+  <p style="color:var(--soft);line-height:1.85;margin-bottom:16px">leyendo libros, escuchando consejos, intentando "pensar positivo", adaptándote para ser aceptada.</p>
+  <p style="color:var(--pd);font-weight:700;font-size:1.05rem;margin-bottom:16px;line-height:1.6">Pero el vacío vuelve. La soledad vuelve. La inseguridad vuelve.</p>
+  <p style="color:var(--soft);line-height:1.85">Porque el problema no está afuera. Está en lo que no has sanado, reprogramado o escuchado dentro de ti.</p>
+  <div class="hbox">
+    <h3>No necesitas hacer más.<br>Necesitas hacer diferente.</h3>
+    <p>No se trata de llenarte de información. Se trata de transformar la raíz de lo que sientes.</p>
+  </div>
+</div></div>
+
+<!-- TERESA — lavanda -->
+<div class="sp"><div class="inner-c">
+  <div class="t-photo"><img src="teresa.jpg" alt="Teresa Estay Luke"></div>
+  <h2>Yo también me sentí así.</h2>
+  <p class="t-role">Teresa Estay Luke · Terapeuta Holística – Consciencia con Amor</p>
+  <div class="teresa-txt">
+    <p>Hubo un momento en mi vida donde me sentía perdida, insegura… y mi cuerpo empezó a manifestarlo.</p>
+    <p>Me olvidé de mí misma intentando encajar, agradar, sostener todo.</p>
+    <p><strong>Hasta que entendí algo clave: No estaba rota. Estaba desconectada.</strong></p>
+    <p>Y esa desconexión tenía una lógica.</p>
+    <p><strong>No fue casualidad que cambiara. Fue el resultado de aplicar un método.</strong></p>
+  </div>
+  <!-- BPR BANNER viola DOLCE -->
+  <div class="bpr-ban">
+    <h3>Mi Método B.P.R.</h3>
+    <p class="bs">La tríada que transformó mi vida</p>
+    <p>No te voy a dar solo consejos. Te voy a enseñar el mismo método que me permitió: sanar mi cuerpo, reprogramar mi mente, despertar mi intuición</p>
+  </div>
+</div></div>
+
+<!-- BPR CARDS — viola dolce (continua dal banner) -->
+<div class="bpr-sec">
+  <div class="bcards">
+    <div class="bcard"><div class="bl">B</div><div><h4>Biodecodificación</h4><p>Sanar el cuerpo y liberar el pasado emocional</p></div></div>
+    <div class="bcard"><div class="bl">P</div><div><h4>Programación Neurolingüística</h4><p>Reprogramar tu mente, tu lenguaje y tu identidad</p></div></div>
+    <div class="bcard"><div class="bl">R</div><div><h4>Registros e Intuición</h4><p>Conectar con tu sabiduría interior y tu guía profunda</p></div></div>
+  </div>
+</div>
+
+<!-- QUÉ VIVIRÁS + STAGES — bianco -->
+<div class="qvs"><div class="inner">
+  <h2 style="text-align:center">Qué vivirás dentro</h2>
+  <p style="text-align:center;color:var(--soft);margin-bottom:44px">Durante 90 días vas a atravesar un proceso estructurado en 3 etapas:</p>
+  <img class="simg" src="https://cdn.abacus.ai/images/e888b4dc-f522-4fee-968d-e1870b59443c.jpg" alt="90 días">
+  <div class="stage">
+    <div class="snt"><div class="sn">1</div><h3>BIOLOGÍA – SANAR LA RAÍZ</h3></div>
+    <p class="stag">Tu cuerpo no está fallando. Está hablando.</p>
+    <p class="albl">Aprenderás a:</p>
+    <ul><li>Identificar el origen emocional de tus bloqueos</li><li>Entender lo que tu cuerpo expresa</li><li>Dejar de adaptarte para ser aceptada</li></ul>
+    <div class="tbox"><strong>✨ Práctica clave:</strong> Mapa de tus silencios</div>
+  </div>
+  <div class="stage">
+    <div class="snt"><div class="sn">2</div><h3>PROGRAMACIÓN – CAMBIAR EL SOFTWARE</h3></div>
+    <p class="stag">Tu mente está programada… y puedes reescribirla.</p>
+    <p class="albl">Aprenderás a:</p>
+    <ul><li>Cambiar tu diálogo interno</li><li>Eliminar creencias de "no soy suficiente"</li><li>Construir una nueva identidad</li></ul>
+    <div class="tbox"><strong>🛠️ Herramientas:</strong> Afirmaciones conscientes, trabajo con espejo, creación de tu Código de Identidad</div>
+  </div>
+  <div class="stage">
+    <div class="snt"><div class="sn">3</div><h3>REGISTROS – DESPERTAR TU INTUICIÓN</h3></div>
+    <p class="stag">Tu intuición no está perdida. Está silenciada.</p>
+    <p class="albl">Aprenderás a:</p>
+    <ul><li>Elevar tu energía y tu estado interno</li><li>Conectar con tu sabiduría profunda</li><li>Manifestar desde coherencia</li></ul>
+    <div class="tbox"><strong>🌟 Prácticas:</strong> Escritura intuitiva, conexión interna, diseño de entorno de alta vibración</div>
+  </div>
+</div></div>
+
+<!-- 90 DAYS — lavanda -->
+<div class="c90"><div class="c90-in">
+  <img class="cimg" src="https://cdn.abacus.ai/images/7f3c9a20-f3d4-4fef-a611-171c04c8b99b.png" alt="Reto 90 días">
+  <h2>EL RETO DE LOS 90 DÍAS</h2>
+  <p class="cs">Aquí es donde todo se integra. No es teoría. Es transformación aplicada.</p>
+  <div class="rbox">
+    <h4>Vas a crear:</h4>
+    <ul><li>Nuevos hábitos</li><li>Una nueva relación contigo</li><li>Una nueva forma de vivir</li></ul>
+  </div>
+</div></div>
+
+<!-- DESPUÉS — bianco, icone viola DOLCE -->
+<div class="sw"><div class="inner">
+  <h2>Después de este proceso…</h2>
+  <ul class="after-list">
+    <li><span class="aico">❤️</span>Dejarás de sentirte sola contigo misma</li>
+    <li><span class="aico">🎯</span>Tendrás claridad interna</li>
+    <li><span class="aico">✨</span>Confiarás en tu intuición</li>
+    <li><span class="aico">🛡️</span>Dejarás de adaptarte para ser aceptada</li>
+    <li><span class="aico">⭐</span>Empezarás a vivir desde tu verdad</li>
+  </ul>
+</div></div>
+
+<!-- FINAL CTA — viola DOLCE -->
+<div class="fcta">
+  <h2>REINVENTA TU SER</h2>
+  <p>Empieza hoy tu proceso de transformación</p>
+  <span class="fp">Solo 47€</span>
+  <a href="#" class="btn-gold">💬 QUIERO EMPEZAR AHORA</a>
+</div>
+
+<!-- FAQ — bianco -->
+<div class="faq">
+  <h2>Preguntas Frecuentes</h2>
+  <div class="fi"><button class="fq" onclick="tf(this)">¿Y si ya he probado muchas cosas?</button><div class="fa">Este proceso es diferente porque no trabaja solo en la superficie. El Método B.P.R. actúa en los tres niveles donde se origina el cambio real: tu biología, tu programación mental y tu conexión interna.</div></div>
+  <div class="fi"><button class="fq" onclick="tf(this)">¿Necesito experiencia previa?</button><div class="fa">No necesitas ninguna experiencia previa. El proceso está diseñado para guiarte paso a paso, desde el principio, sin importar desde dónde partes.</div></div>
+  <div class="fi"><button class="fq" onclick="tf(this)">¿Esto es espiritual o técnico?</button><div class="fa">Es ambos. El Método B.P.R. combina herramientas concretas y prácticas (NLP, biodecodificación) con una dimensión más profunda de conexión interna y despertar de la intuición.</div></div>
+</div>
+
+<!-- CLOSING — bianco -->
+<div class="clos-wrap">
+  <div class="clos">
+    <p>La soledad que sientes… no es porque estés sola.</p>
+    <p>Es porque <span class="hl">no estás completamente contigo.</span></p>
+    <p class="tl">Y eso… se puede transformar.</p>
+  </div>
+  <div class="closbox">
+    <p>Este puede ser el inicio de tu nueva relación contigo misma.</p>
+    <a href="#" class="btn-purple">💬 QUIERO REINVENTARME</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">
+    <img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Logo">
+    <span>Consciencia con Amor</span>
+    <small>Teresa Estay Luke · Terapeuta Holística</small>
+  </div>
+  <a href="https://www.instagram.com/consciencia_con_amor" target="_blank">📸 @consciencia_con_amor</a>
+  <p class="disc">Disclaimer: Este proceso es educativo y no sustituye acompañamiento médico o psicológico. Los resultados dependen del compromiso personal con el proceso.</p>
+  <p class="copy">© 2026 Consciencia con Amor. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+function tf(b){
+  var a=b.nextElementSibling,o=a.classList.contains("open");
+  document.querySelectorAll(".fa").forEach(function(x){x.classList.remove("open")});
+  document.querySelectorAll(".fq").forEach(function(x){x.classList.remove("open")});
+  if(!o){a.classList.add("open");b.classList.add("open")}
+}
+</script>
+</body>
+</html>
