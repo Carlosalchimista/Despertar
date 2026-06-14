@@ -6,6 +6,10 @@
   <title>REINVENTA TU SER - Consciencia con Amor | Transformación Personal en 90 Días</title>
   <meta name="description" content="Conecta contigo misma para no sentirte sola nunca más. Un viaje profundo de 90 días a través del Método B.P.R. para sanar tu biología, reprogramar tu mente y despertar tu intuición." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -66,30 +70,30 @@
       padding: 80px 20px 60px;
       overflow: hidden;
     }
-/* HERO — visibilità migliorata (versione consigliata) */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('https://carlosalchimista.github.io/Despertar/IMG/primo.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.80); /* più chiara rispetto alla versione scura */
-  transition: filter 300ms ease;
-}
+    /* HERO — visibilità migliorata (versione consigliata) */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://carlosalchimista.github.io/Despertar/IMG/primo.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.80); /* più chiara rispetto alla versione scura */
+      transition: filter 300ms ease;
+    }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg,
-    rgba(30,10,53,0.12) 0%,
-    rgba(30,10,53,0.35) 60%,
-    rgba(21,8,32,0.65) 100%);
-  pointer-events: none;
-}
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(30,10,53,0.12) 0%,
+        rgba(30,10,53,0.35) 60%,
+        rgba(21,8,32,0.65) 100%);
+      pointer-events: none;
+    }
 
-/* Miglioro la leggibilità dei titoli se l'immagine è più luminosa */
-.hero h1 { color: rgba(245,240,232,0.95); text-shadow: 0 6px 22px rgba(0,0,0,0.45); }
-.hero-title { color: #ffffff; text-shadow: 0 8px 36px rgba(0,0,0,0.48); }
+    /* Miglioro la leggibilità dei titoli se l'immagine è più luminosa */
+    .hero h1 { color: rgba(245,240,232,0.95); text-shadow: 0 6px 22px rgba(0,0,0,0.45); }
+    .hero-title { color: #ffffff; text-shadow: 0 8px 36px rgba(0,0,0,0.48); }
     .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
 
     .logo-wrap { margin-bottom: 32px; }
@@ -523,6 +527,11 @@
     footer .copy { color:rgba(255,255,255,0.2); font-size:0.78rem; margin-top:10px; }
 
     .gold-divider { width:56px; height:2px; background:var(--gold); margin:0 auto 28px; }
+
+    /* Small helper to ensure AOS animations look smooth on mobile */
+    @media (prefers-reduced-motion: reduce) {
+      [data-aos] { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -533,36 +542,36 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="logo-wrap">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="700">
+      <div class="logo-wrap" data-aos="fade-down" data-aos-delay="80">
         <img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Consciencia con Amor" />
       </div>
-      <h1>¿Te imaginas cómo sería tu vida si dejaras de sentirte sola…incluso cuando estás contigo misma?</h1>
-      <div class="hero-title">REINVENTA TU SER</div>
-      <p class="hero-subtitle">Conecta contigo misma para no sentirte sola nunca más</p>
-      <p class="hero-desc">Un viaje profundo de 90 días a través del Método B.P.R. para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
-      <a href="#cta" class="btn-primary">QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
-      <p class="price-note"><span style="color: var(--gold-light); font-weight: bold;">Solo 47€</span></p>
+      <h1 data-aos="fade-up" data-aos-delay="120">¿Te imaginas cómo sería tu vida si dejaras de sentirte sola…incluso cuando estás contigo misma?</h1>
+      <div class="hero-title" data-aos="zoom-in" data-aos-delay="180">REINVENTA TU SER</div>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="220">Conecta contigo misma para no sentirte sola nunca más</p>
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="260">Un viaje profundo de 90 días a través del Método B.P.R. para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
+      <a href="#cta" class="btn-primary" data-aos="fade-up" data-aos-delay="320">QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
+      <p class="price-note" data-aos="fade-up" data-aos-delay="380"><span style="color: var(--gold-light); font-weight: bold;">Solo 47€</span></p>
     </div>
   </section>
 
   <!-- ═══ FOR YOU ═══ -->
   <section class="for-you">
     <div class="container">
-      <h2>Este proceso es para ti si…</h2>
-      <div class="checklist-grid">
-        <div class="check-card"><div class="check-icon">✓</div>Te sientes sola incluso estando acompañada</div>
-        <div class="check-card"><div class="check-icon">✓</div>Te cuesta poner límites y terminas complaciendo a los demás</div>
-        <div class="check-card"><div class="check-icon">✓</div>Sientes que no eres suficiente</div>
-        <div class="check-card"><div class="check-icon">✓</div>Repites relaciones o situaciones que te drenan</div>
-        <div class="check-card"><div class="check-icon">✓</div>Tu cuerpo expresa lo que no logras decir</div>
-        <div class="check-card"><div class="check-icon">✓</div>Sabes que hay algo más en ti… pero no sabes cómo acceder</div>
+      <h2 data-aos="fade-up">Este proceso es para ti si…</h2>
+      <div class="checklist-grid" data-aos="fade-up" data-aos-delay="80">
+        <div class="check-card" data-aos="fade-right" data-aos-delay="100"><div class="check-icon">✓</div>Te sientes sola incluso estando acompañada</div>
+        <div class="check-card" data-aos="fade-right" data-aos-delay="180"><div class="check-icon">✓</div>Te cuesta poner límites y terminas complaciendo a los demás</div>
+        <div class="check-card" data-aos="fade-right" data-aos-delay="260"><div class="check-icon">✓</div>Sientes que no eres suficiente</div>
+        <div class="check-card" data-aos="fade-right" data-aos-delay="340"><div class="check-icon">✓</div>Repites relaciones o situaciones que te drenan</div>
+        <div class="check-card" data-aos="fade-right" data-aos-delay="420"><div class="check-icon">✓</div>Tu cuerpo expresa lo que no logras decir</div>
+        <div class="check-card" data-aos="fade-right" data-aos-delay="500"><div class="check-icon">✓</div>Sabes que hay algo más en ti… pero no sabes cómo acceder</div>
       </div>
 
-      <div class="cta-box" id="cta">
+      <div class="cta-box" id="cta" data-aos="zoom-in" data-aos-delay="140">
         <h3>REINVENTA TU SER</h3>
-        <p class="sub">Asegura tu lugar hoy - Solo 47€</p>
-        <a href="#" class="btn-primary">QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
+        <p class="sub">Asegura tu lugar hoy - <span style="color: var(--gold-light); font-weight: bold;">Solo 47€</span></p>
+        <a href="#" class="btn-primary" data-aos="fade-up" data-aos-delay="220">QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
       </div>
     </div>
   </section>
@@ -570,39 +579,39 @@
   <!-- ═══ NOT MOTIVATION ═══ -->
   <section class="not-motiv">
     <div class="container">
-      <h2>Esto no es otro curso de motivación.</h2>
-      <p>Es un proceso estructurado donde vas a trabajar en tres niveles fundamentales de tu ser:</p>
+      <h2 data-aos="fade-up">Esto no es otro curso de motivación.</h2>
+      <p data-aos="fade-up" data-aos-delay="80">Es un proceso estructurado donde vas a trabajar en tres niveles fundamentales de tu ser:</p>
       <div class="levels-grid">
-        <div class="level-card"><div class="icon">🫀</div><h3>Tu cuerpo</h3><p>(biología)</p></div>
-        <div class="level-card"><div class="icon">🧠</div><h3>Tu mente</h3><p>(programación)</p></div>
-        <div class="level-card"><div class="icon">✨</div><h3>Tu intuición</h3><p>(conexión interna)</p></div>
+        <div class="level-card" data-aos="fade-up" data-aos-delay="120"><div class="icon">🫀</div><h3>Tu cuerpo</h3><p>(biología)</p></div>
+        <div class="level-card" data-aos="fade-up" data-aos-delay="180"><div class="icon">🧠</div><h3>Tu mente</h3><p>(programación)</p></div>
+        <div class="level-card" data-aos="fade-up" data-aos-delay="240"><div class="icon">✨</div><h3>Tu intuición</h3><p>(conexión interna)</p></div>
       </div>
-      <p style="font-style:italic;color:rgba(255,255,255,0.65);">Porque no puedes cambiar tu vida… si no cambias lo que la está creando desde dentro.</p>
+      <p style="font-style:italic;color:rgba(255,255,255,0.65);" data-aos="fade-up" data-aos-delay="320">Porque no puedes cambiar tu vida… si no cambias lo que la está creando desde dentro.</p>
     </div>
   </section>
 
   <!-- ═══ EMPATHY ═══ -->
   <section class="empathy">
     <div class="container">
-      <h2>Durante años has intentado sentirte mejor…</h2>
-      <div class="gold-divider"></div>
-      <p>leyendo libros, escuchando consejos, intentando "pensar positivo", adaptándote para ser aceptada.</p>
-      <p>Pero el vacío vuelve. La soledad vuelve. La inseguridad vuelve.</p>
-      <p>Porque el problema no está afuera. Está en lo que no has sanado, reprogramado o escuchado dentro de ti.</p>
-      <p class="highlight">No necesitas hacer más. Necesitas hacer diferente.</p>
-      <p>No se trata de llenarte de información. Se trata de transformar la raíz de lo que sientes.</p>
+      <h2 data-aos="fade-up">Durante años has intentado sentirte mejor…</h2>
+      <div class="gold-divider" data-aos="fade-up" data-aos-delay="80"></div>
+      <p data-aos="fade-up" data-aos-delay="120">leyendo libros, escuchando consejos, intentando "pensar positivo", adaptándote para ser aceptada.</p>
+      <p data-aos="fade-up" data-aos-delay="160">Pero el vacío vuelve. La soledad vuelve. La inseguridad vuelve.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Porque el problema no está afuera. Está en lo que no has sanado, reprogramado o escuchado dentro de ti.</p>
+      <p class="highlight" data-aos="fade-up" data-aos-delay="260">No necesitas hacer más. Necesitas hacer diferente.</p>
+      <p data-aos="fade-up" data-aos-delay="300">No se trata de llenarte de información. Se trata de transformar la raíz de lo que sientes.</p>
     </div>
   </section>
 
   <!-- ═══ TERESA ═══ -->
   <section class="teresa">
     <div class="teresa-inner">
-      <div>
+      <div data-aos="fade-right" data-aos-delay="120">
         <img class="teresa-img"
           src="https://carlosalchimista.github.io/Despertar/IMG/teresa.jpg"
           alt="Teresa Estay Luke" />
       </div>
-      <div class="teresa-text">
+      <div class="teresa-text" data-aos="fade-left" data-aos-delay="180">
         <h2>Yo también me sentí así.</h2>
         <p>Hubo un momento en mi vida donde me sentía perdida, insegura… y mi cuerpo empezó a manifestarlo.</p>
         <p>Me olvidé de mí misma intentando encajar, agradar, sostener todo.</p>
@@ -619,7 +628,7 @@
 
   <!-- ═══ METHOD BPR ═══ -->
   <section class="method">
-    <div class="method-intro">
+    <div class="method-intro" data-aos="fade-up">
       <span class="sec-lbl">El método</span>
       <h2>Mi Método B.P.R.</h2>
       <p class="tagline">La tríada que transformó mi vida</p>
@@ -628,20 +637,20 @@
 
     <img class="method-img"
       src="https://carlosalchimista.github.io/Despertar/IMG/secondo.jpg"
-      alt="Método B.P.R." />
+      alt="Método B.P.R." data-aos="zoom-in" data-aos-delay="120" />
 
     <div class="bpr-grid">
-      <div class="bpr-card">
+      <div class="bpr-card" data-aos="fade-up" data-aos-delay="140">
         <div class="bpr-letter">B</div>
         <h3>Biodecodificación</h3>
         <p>Sanar el cuerpo y liberar el pasado emocional</p>
       </div>
-      <div class="bpr-card">
+      <div class="bpr-card" data-aos="fade-up" data-aos-delay="200">
         <div class="bpr-letter">P</div>
         <h3>Programación Neurolingüística</h3>
         <p>Reprogramar tu mente, tu lenguaje y tu identidad</p>
       </div>
-      <div class="bpr-card">
+      <div class="bpr-card" data-aos="fade-up" data-aos-delay="260">
         <div class="bpr-letter">R</div>
         <h3>Registros e Intuición</h3>
         <p>Conectar con tu sabiduría interior y tu guía profunda</p>
@@ -652,15 +661,15 @@
   <!-- ═══ QUÉ VIVIRÁS ═══ -->
   <section class="journey">
     <div class="container">
-      <h2>Qué vivirás dentro</h2>
-      <p class="journey-desc">Durante 90 días vas a atravesar un proceso estructurado en 3 etapas:</p>
+      <h2 data-aos="fade-up">Qué vivirás dentro</h2>
+      <p class="journey-desc" data-aos="fade-up" data-aos-delay="80">Durante 90 días vas a atravesar un proceso estructurado en 3 etapas:</p>
 
       <img class="journey-img"
         src="https://cdn.abacus.ai/images/e888b4dc-f522-4fee-968d-e1870b59443c.jpg"
-        alt="90-day transformation journey" />
+        alt="90-day transformation journey" data-aos="fade-up" data-aos-delay="120" />
 
       <!-- STAGE 1 -->
-      <div class="stage">
+      <div class="stage" data-aos="fade-up" data-aos-delay="140">
         <div class="stage-header">
           <div class="stage-num">1</div>
           <h3>BIOLOGÍA – SANAR LA RAÍZ</h3>
@@ -678,7 +687,7 @@
       </div>
 
       <!-- STAGE 2 -->
-      <div class="stage">
+      <div class="stage" data-aos="fade-up" data-aos-delay="200">
         <div class="stage-header">
           <div class="stage-num">2</div>
           <h3>PROGRAMACIÓN – CAMBIAR EL SOFTWARE</h3>
@@ -696,7 +705,7 @@
       </div>
 
       <!-- STAGE 3 -->
-      <div class="stage">
+      <div class="stage" data-aos="fade-up" data-aos-delay="260">
         <div class="stage-header">
           <div class="stage-num">3</div>
           <h3>REGISTROS – DESPERTAR TU INTUICIÓN</h3>
@@ -720,12 +729,12 @@
     <div class="container">
       <img class="challenge-img"
         src="https://cdn.abacus.ai/images/7f3c9a20-f3d4-4fef-a611-171c04c8b99b.png"
-        alt="Transformation meditation" />
-      <span class="sec-lbl">La integración</span>
-      <h2>EL RETO DE LOS 90 DÍAS</h2>
-      <p class="accent">Aquí es donde todo se integra. No es teoría. Es transformación aplicada.</p>
-      <p style="color:rgba(255,255,255,0.75);margin-bottom:18px;">Vas a crear:</p>
-      <ul class="challenge-list">
+        alt="Transformation meditation" data-aos="zoom-in" />
+      <span class="sec-lbl" data-aos="fade-up" data-aos-delay="80">La integración</span>
+      <h2 data-aos="fade-up" data-aos-delay="120">EL RETO DE LOS 90 DÍAS</h2>
+      <p class="accent" data-aos="fade-up" data-aos-delay="160">Aquí es donde todo se integra. No es teoría. Es transformación aplicada.</p>
+      <p style="color:rgba(255,255,255,0.75);margin-bottom:18px;" data-aos="fade-up" data-aos-delay="200">Vas a crear:</p>
+      <ul class="challenge-list" data-aos="fade-up" data-aos-delay="240">
         <li>Nuevos hábitos</li>
         <li>Una nueva relación contigo</li>
         <li>Una nueva forma de vivir</li>
@@ -736,13 +745,13 @@
   <!-- ═══ OUTCOMES ═══ -->
   <section class="outcomes">
     <div class="container">
-      <h2>Después de este proceso…</h2>
+      <h2 data-aos="fade-up">Después de este proceso…</h2>
       <div class="outcomes-grid">
-        <div class="outcome-card"><p>Dejarás de sentirte sola contigo misma</p></div>
-        <div class="outcome-card"><p>Tendrás claridad interna</p></div>
-        <div class="outcome-card"><p>Confiarás en tu intuición</p></div>
-        <div class="outcome-card"><p>Dejarás de adaptarte para ser aceptada</p></div>
-        <div class="outcome-card" style="grid-column:1/-1;"><p>Empezarás a vivir desde tu verdad</p></div>
+        <div class="outcome-card" data-aos="fade-up" data-aos-delay="120"><p>Dejarás de sentirte sola contigo misma</p></div>
+        <div class="outcome-card" data-aos="fade-up" data-aos-delay="180"><p>Tendrás claridad interna</p></div>
+        <div class="outcome-card" data-aos="fade-up" data-aos-delay="240"><p>Confiarás en tu intuición</p></div>
+        <div class="outcome-card" data-aos="fade-up" data-aos-delay="300"><p>Dejarás de adaptarte para ser aceptada</p></div>
+        <div class="outcome-card" style="grid-column:1/-1;" data-aos="fade-up" data-aos-delay="360"><p>Empezarás a vivir desde tu verdad</p></div>
       </div>
     </div>
   </section>
@@ -750,19 +759,19 @@
   <!-- ═══ FINAL CTA ═══ -->
   <section class="final-cta">
     <div class="container">
-      <h2>REINVENTA TU SER</h2>
-      <p>Empieza hoy tu proceso de transformación</p>
-      <a href="#" class="btn-primary">QUIERO EMPEZAR AHORA</a>
-      <p class="price-note"><span style="color: var(--gold-light); font-weight: bold;">Solo 47€</span></p>
+      <h2 data-aos="fade-up">REINVENTA TU SER</h2>
+      <p data-aos="fade-up" data-aos-delay="80">Empieza hoy tu proceso de transformación</p>
+      <a href="#" class="btn-primary" data-aos="fade-up" data-aos-delay="140">QUIERO EMPEZAR AHORA</a>
+      <p class="price-note" data-aos="fade-up" data-aos-delay="200"><span style="color: var(--gold-light); font-weight: bold;">Solo 47€</span></p>
     </div>
   </section>
 
   <!-- ═══ FAQ ═══ -->
   <section class="faq">
     <div class="container">
-      <h2>Preguntas Frecuentes</h2>
+      <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
 
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="120">
         <button class="faq-q" onclick="toggleFaq(this)">
           ¿Y si ya he probado muchas cosas?
           <span class="arrow">▾</span>
@@ -772,7 +781,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="180">
         <button class="faq-q" onclick="toggleFaq(this)">
           ¿Necesito experiencia previa?
           <span class="arrow">▾</span>
@@ -782,7 +791,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="240">
         <button class="faq-q" onclick="toggleFaq(this)">
           ¿Esto es espiritual o técnico?
           <span class="arrow">▾</span>
@@ -797,13 +806,13 @@
   <!-- ═══ CLOSING ═══ -->
   <section class="closing">
     <div class="container">
-      <p>La soledad que sientes… no es porque estés sola.</p>
-      <p>Es porque <strong>no estás completamente contigo.</strong></p>
-      <p class="sub">Y eso… se puede transformar.</p>
-      <p style="font-size:0.97rem;color:var(--text-mid);font-style:normal;font-family:'Inter',sans-serif;margin-bottom:36px;">
+      <p data-aos="fade-up">La soledad que sientes… no es porque estés sola.</p>
+      <p data-aos="fade-up" data-aos-delay="80">Es porque <strong>no estás completamente contigo.</strong></p>
+      <p class="sub" data-aos="fade-up" data-aos-delay="140">Y eso… se puede transformar.</p>
+      <p style="font-size:0.97rem;color:var(--text-mid);font-style:normal;font-family:'Inter',sans-serif;margin-bottom:36px;" data-aos="fade-up" data-aos-delay="180">
         Este puede ser el inicio de tu nueva relación contigo misma.
       </p>
-      <a href="#cta" class="btn-primary">QUIERO REINVENTARME</a>
+      <a href="#cta" class="btn-primary" data-aos="fade-up" data-aos-delay="220">QUIERO REINVENTARME</a>
     </div>
   </section>
 
@@ -819,10 +828,25 @@
     <p class="copy">© 2026 Consciencia con Amor. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script>
+    // Inizializza AOS
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
+
+    // Mantengo il comportamento loader e FAQ esistente
     window.addEventListener('load', () => {
       setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
+      // refresh AOS dopo il caricamento per essere sicuri che posizioni siano corrette
+      if (window.AOS) AOS.refresh();
     });
+
     function toggleFaq(btn) {
       const ans = btn.nextElementSibling;
       const open = btn.classList.contains('open');
