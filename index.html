@@ -22,8 +22,9 @@ body{font-family:"Inter",sans-serif;color:var(--text);overflow-x:hidden;backgrou
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 28px 90px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url("IMG/primo.jpg") center/cover no-repeat;background-size:cover;background-position:center;}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(160deg,#2d1654 0%,#3d1a7a 50%,#2a1050 100%);opacity:.45}
+.hero-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.hero-bg .hero-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(160deg,#2d1654 0%,#3d1a7a 50%,#2a1050 100%);opacity:.45;z-index:1}
 .hero>*{position:relative;z-index:2}
 .logo{margin-bottom:32px}
 .logo img{width:88px;height:88px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.4)}
@@ -177,7 +178,7 @@ footer a:hover{text-decoration:underline}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div><div class="hero-ov"></div>
+  <div class="hero-bg"><img class="hero-img" src="IMG/primo.jpg" alt=""></div><div class="hero-ov"></div>
   <div class="logo"><img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Logo"></div>
   <div class="badge">⏱ Próximamente</div>
   <p class="hero-q">¿Te imaginas cómo sería tu vida si dejaras de sentirte sola… <em>incluso cuando estás contigo misma?</em></p>
@@ -263,7 +264,6 @@ footer a:hover{text-decoration:underline}
     <div class="bcard"><div class="bl">P</div><div><h4>Programación Neurolingüística</h4><p>Reprogramar tu mente, tu lenguaje y tu identidad</p></div></div>
     <div class="bcard"><div class="bl">R</div><div><h4>Registros e Intuición</h4><p>Conectar con tu sabiduría interior y tu guía profunda</p></div></div>
   </div>
-</div>
 </div>
 
 <!-- QUÉ VIVIRÁS + STAGES — bianco -->
