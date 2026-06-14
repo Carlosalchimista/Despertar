@@ -22,7 +22,7 @@ body{font-family:"Inter",sans-serif;color:var(--text);overflow-x:hidden;backgrou
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 28px 90px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url("https://cdn.abacus.ai/images/d4283472-3c78-42c1-9a91-046857a6fa33.jpg") center/cover no-repeat}
+.hero-bg{position:absolute;inset:0;background:url("IMG/primo.jpg") center/cover no-repeat;background-size:cover;background-position:center}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(160deg,#2d1654 0%,#3d1a7a 50%,#2a1050 100%);opacity:.93}
 .hero>*{position:relative;z-index:2}
 .logo{margin-bottom:32px}
@@ -92,7 +92,9 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,5.5vw,2.7rem);col
 .bpr-ban p{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.75}
 
 /* BPR CARDS — viola dolce */
-.bpr-sec{background:var(--p);padding:60px 28px}
+.bpr-sec{background:var(--p) url("IMG/secondo.jpg") center/cover no-repeat;padding:60px 28px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.bpr-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,22,84,0.72),rgba(45,22,84,0.72));pointer-events:none}
+.bpr-sec .inner{position:relative;z-index:2}
 .bpr-sec h2{color:#fff}
 .bpr-sec .ms{color:rgba(255,255,255,.6);margin-bottom:44px;text-align:center}
 .bcards{display:flex;flex-direction:column;gap:18px;max-width:680px;margin:0 auto}
