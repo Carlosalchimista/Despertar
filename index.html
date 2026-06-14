@@ -66,19 +66,30 @@
       padding: 80px 20px 60px;
       overflow: hidden;
     }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('https://carlosalchimista.github.io/Despertar/IMG/primo.jpg');
-      background-size: cover; background-position: center;
-      filter: brightness(0.45);
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg,
-        rgba(30,10,53,0.25) 0%,
-        rgba(30,10,53,0.55) 60%,
-        rgba(21,8,32,0.95) 100%);
-    }
+/* HERO — visibilità migliorata (versione consigliata) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://carlosalchimista.github.io/Despertar/IMG/primo.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.80); /* più chiara rispetto alla versione scura */
+  transition: filter 300ms ease;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(30,10,53,0.12) 0%,
+    rgba(30,10,53,0.35) 60%,
+    rgba(21,8,32,0.65) 100%);
+  pointer-events: none;
+}
+
+/* Miglioro la leggibilità dei titoli se l'immagine è più luminosa */
+.hero h1 { color: rgba(245,240,232,0.95); text-shadow: 0 6px 22px rgba(0,0,0,0.45); }
+.hero-title { color: #ffffff; text-shadow: 0 8px 36px rgba(0,0,0,0.48); }
     .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
 
     .logo-wrap { margin-bottom: 32px; }
