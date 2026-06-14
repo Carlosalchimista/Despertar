@@ -1,3 +1,5 @@
+ecco il codice... fai la modifca tu solo del prezzo pero:
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -135,10 +137,17 @@
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.55); }
 
-    .price-note {
+    .price-note,
+    .final-cta .price {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);                /* colore oro */
+      font-weight: 700;
+      font-size: clamp(1rem, 2.6vw, 1.6rem); /* responsiva */
+      text-align: center;
       margin-top: 14px;
-      font-size: 0.88rem;
-      color: rgba(245,240,232,0.65);
+      letter-spacing: 0.02em;
+      text-shadow: 0 6px 18px rgba(33,18,40,0.45); /* contrasto su zone luminose */
     }
 
     /* ── FOR YOU — sezione bianca/crema ── */
@@ -434,7 +443,12 @@
       font-size:clamp(2rem,6vw,3.2rem); margin-bottom:10px;
     }
     .final-cta p { color:rgba(255,255,255,0.75); font-size:1rem; margin-bottom:36px; }
-    .final-cta .price { margin-top:14px; color:rgba(255,255,255,0.6); font-size:0.9rem; }
+    .final-cta .price {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      color: var(--gold);
+      text-shadow: 0 8px 26px rgba(33,18,40,0.48);
+      margin-top: 14px;
+    }
 
     /* ── FAQ — crema ── */
     .faq { background:var(--cream-light); padding:80px 20px; }
