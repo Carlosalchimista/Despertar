@@ -1,468 +1,864 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REINVENTA TU SER – Consciencia con Amor</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --p:#5b2d8e;
-  --pd:#2d1654;
-  --pl:#7c4db8;
-  --pbg:#f3eef8;
-  --pborder:#ddd0f0;
-  --gold:#f5c518;
-  --white:#fff;
-  --text:#1a0e2e;
-  --soft:#5a4a7a;
-}
-body{font-family:"Inter",sans-serif;color:var(--text);overflow-x:hidden;background:#fff}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REINVENTA TU SER - Consciencia con Amor | Transformación Personal en 90 Días</title>
+  <meta name="description" content="Conecta contigo misma para no sentirte sola nunca más. Un viaje profundo de 90 días a través del Método B.P.R. para sanar tu biología, reprogramar tu mente y despertar tu intuición." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px;overflow:hidden;background-image:url("IMG/primo.jpg");background-size:cover;background-position:center center;background-repeat:no-repeat}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,10,40,0.42) 0%, rgba(20,10,40,0.30) 50%, rgba(20,10,40,0.20) 100%);z-index:1;pointer-events:none}
-.hero .hero-inner{position:relative;z-index:2;max-width:1100px;padding:40px 20px}
-.logo{margin-bottom:28px}
-.logo img{width:88px;height:88px;border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.18)}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.95);border-radius:30px;padding:9px 22px;font-size:.85rem;margin-bottom:18px}
-.hero-q{color:rgba(255,255,255,0.95);font-size:clamp(1rem,3vw,1.4rem);max-width:1000px;line-height:1.35;margin-bottom:6px}
-.hero-q em{color:var(--gold);font-style:normal;font-weight:600}
-.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,10vw,7rem);font-weight:700;color:#fff;line-height:0.9;letter-spacing:-2px;margin:18px 0 20px}
-.hero-h1 span{color:var(--gold)}
-.hero-tag{color:rgba(255,255,255,0.92);font-size:clamp(.95rem,2.5vw,1.15rem);max-width:820px;line-height:1.6;margin-bottom:14px}
-.hero-desc{color:rgba(255,255,255,0.92);font-size:1rem;max-width:820px;line-height:1.75;margin-bottom:28px}
-.hero-desc strong{color:var(--gold);font-weight:700}
-@media(max-width:900px){.hero{min-height:720px;padding:40px 18px}.hero-h1{font-size:clamp(2.6rem,9vw,4rem)} }
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dark: #a07830;
+      --deep-purple: #1a0a2e;
+      --mid-purple: #2d1550;
+      --purple: #4a1f7a;
+      --purple-light: #6b35a8;
+      --cream: #f5f0e8;
+      --cream-dark: #ece4d4;
+      --text-dark: #1a0a2e;
+      --text-body: #3a2a5a;
+      --white: #ffffff;
+      --bg-dark: #0d0520;
+    }
 
-/* BOTTONI */
-.btn-gold{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--pd);font-weight:700;font-size:.95rem;padding:17px 36px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(245,197,24,.45)}
-.btn-purple{display:inline-flex;align-items:center;gap:10px;background:var(--p);color:#fff;font-weight:700;font-size:.95rem;padding:17px 36px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.btn-purple:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(91,45,142,.4)}
+    html { scroll-behavior: smooth; }
 
-/* PRICE BAND */
-.pband{background:var(--p);text-align:center;padding:26px}
-.pband .pt{font-family:"Playfair Display",serif;font-size:2.4rem;font-weight:700;color:var(--gold)}
-.pband .ar{color:rgba(255,255,255,.5);font-size:1.4rem;margin-top:6px}
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-dark);
+      overflow-x: hidden;
+    }
 
-/* LAYOUT */
-.sw{background:#fff;padding:80px 28px}
-.sp{background:var(--pbg);padding:80px 28px}
-.inner{max-width:680px;margin:0 auto}
-.inner-c{max-width:680px;margin:0 auto;text-align:center}
-h2{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,5.5vw,2.7rem);color:var(--pd);margin-bottom:36px;line-height:1.2}
+    /* ── LOADER ── */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--deep-purple);
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.6s ease;
+    }
+    #loader.hidden { opacity: 0; pointer-events: none; }
+    .loader-text {
+      color: var(--gold-light);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
 
-/* CHECKLIST */
-.cl{list-style:none;display:flex;flex-direction:column;gap:14px}
-.cl li{display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid var(--pborder);border-radius:16px;padding:18px 22px;font-size:1rem;color:var(--text);line-height:1.4;box-shadow:0 2px 12px rgba(91,45,142,.06)}
-.ci{width:36px;height:36px;min-width:36px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;font-weight:700}
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 80px 20px 60px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://carlosalchimista.github.io/Despertar/IMG/primo.jpg');
+      background-size: cover; background-position: center;
+      filter: brightness(0.45);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(13,5,32,0.3) 0%, rgba(26,10,46,0.6) 60%, rgba(13,5,32,0.95) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
 
-/* CTA VIOLA MID */
-.ctab{background:var(--p);text-align:center;padding:60px 28px}
-.ctab h3{font-family:"Playfair Display",serif;font-size:2rem;color:#fff;margin-bottom:8px}
-.ctab .sub{color:rgba(255,255,255,.65);margin-bottom:8px}
-.ctab .pr{font-family:"Playfair Display",serif;font-size:2.4rem;font-weight:700;color:var(--gold);margin-bottom:30px;display:block}
+    .logo-wrap { margin-bottom: 32px; }
+    .logo-wrap img { height: 80px; width: auto; object-fit: contain; }
 
-/* PILLARS */
-.pillars{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
-.pill{background:#fff;border:1.5px solid var(--pborder);border-radius:18px;padding:30px 24px;text-align:center;box-shadow:0 2px 16px rgba(91,45,142,.07)}
-.pico{width:58px;height:58px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem}
-.pill h4{font-family:"Playfair Display",serif;font-size:1.2rem;color:var(--pd);margin-bottom:5px}
-.pill p{color:var(--soft);font-size:.9rem}
-.quote{margin-top:44px;padding:34px 28px;background:var(--pbg);border-radius:18px;font-family:"Playfair Display",serif;font-size:clamp(1.1rem,3vw,1.4rem);color:var(--pd);font-style:italic;line-height:1.6;text-align:center}
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 6px 20px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
 
-/* HIGHLIGHT ORO */
-.hbox{background:var(--gold);border-radius:20px;padding:38px 30px;margin-top:38px;text-align:center}
-.hbox h3{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,4.5vw,2rem);color:var(--pd);margin-bottom:14px;line-height:1.25}
-.hbox p{color:var(--pd);font-size:1rem;line-height:1.75}
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
 
-/* TERESA */
-.t-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;margin:0 auto 32px;border:4px solid var(--pborder);box-shadow:0 10px 40px rgba(91,45,142,.15)}
-.t-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.t-role{color:var(--p);font-size:.95rem;margin-bottom:32px}
-.teresa-txt p{color:var(--soft);font-size:1rem;line-height:1.9;margin-bottom:14px}
-.teresa-txt p strong{color:var(--pd)}
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
 
-/* BPR UNIFIED BLOCK — banner + cards su unico sfondo IMG/secondo.jpg */
-.bpr-block{
-  position:relative;
-  background-image: url("IMG/secondo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding:72px 20px;
-  margin-top:44px;
-  border-radius:12px;
-  overflow:hidden;
-}
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--cream);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
 
-/* overlay per garantire leggibilità */
-.bpr-block::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(20,10,40,0.60) 0%, rgba(20,10,40,0.55) 40%, rgba(20,10,40,0.60) 100%);
-  z-index:1;
-}
+    .hero-desc {
+      font-size: 0.95rem;
+      color: rgba(245,240,232,0.75);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
 
-/* contenuto effettivo sopra overlay */
-.bpr-block .bpr-inner{
-  position:relative;
-  z-index:2;
-  max-width:980px;
-  margin:0 auto;
-  padding:28px;
-}
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--deep-purple);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
 
-/* banner (traslucido sopra l'immagine) */
-.bpr-block .bpr-ban{
-  background:rgba(255,255,255,0.06);
-  border-radius:18px;
-  padding:34px 24px;
-  text-align:center;
-  margin:0 auto 28px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border:1px solid rgba(255,255,255,0.06);
-}
-.bpr-block .bpr-ban h3{font-family:"Playfair Display",serif;font-size:2.1rem;color:#fff;margin-bottom:8px}
-.bpr-block .bpr-ban .bs{color:rgba(255,255,255,0.78);margin-bottom:12px}
-.bpr-block .bpr-ban p{color:rgba(255,255,255,0.88);font-size:0.95rem;line-height:1.7}
+    .price-note {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
 
-/* cards dentro lo stesso blocco */
-.bpr-block .bpr-sec{background:transparent;padding:0 10px}
-.bpr-block .bcards{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  max-width:820px;
-  margin:0 auto;
-}
-@media(min-width:780px){
-  .bpr-block .bcards{flex-direction:row;justify-content:space-between}
-}
-.bpr-block .bcard{
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.06);
-  border-radius:16px;
-  padding:22px;
-  display:flex;
-  gap:16px;
-  align-items:flex-start;
-  min-width:220px;
-  flex:1;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-.bpr-block .bl{
-  width:52px;height:52px;min-width:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  background:var(--gold);font-family:"Playfair Display",serif;font-size:1.4rem;font-weight:700;color:var(--pd);
-}
-.bpr-block .bcard h4{color:#fff;font-size:1.05rem;margin-bottom:6px}
-.bpr-block .bcard p{color:rgba(255,255,255,0.85);font-size:0.95rem;line-height:1.6}
+    /* ── SECTIONS SHARED ── */
+    section { position: relative; }
 
-/* QUE VIVIRÁS — bianco */
-.qvs{background:#fff;padding:60px 28px}
+    .section-light {
+      background: var(--cream);
+      color: var(--text-dark);
+      padding: 80px 20px;
+    }
+    .section-dark {
+      background: var(--deep-purple);
+      color: var(--white);
+      padding: 80px 20px;
+    }
+    .section-mid {
+      background: var(--mid-purple);
+      color: var(--white);
+      padding: 80px 20px;
+    }
+    .section-gradient {
+      background: linear-gradient(160deg, var(--deep-purple) 0%, var(--mid-purple) 100%);
+      color: var(--white);
+      padding: 80px 20px;
+    }
 
-/* STAGES — card viola dolce */
-.simg{width:100%;border-radius:20px;max-height:240px;object-fit:cover;margin-bottom:38px;display:block}
-.stage{background:var(--p);border-radius:22px;padding:30px 26px;margin-bottom:20px}
-.snt{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.sn{width:44px;height:44px;min-width:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--pd);font-size:1.15rem}
-.stage h3{color:#fff;font-size:1.1rem;font-weight:700;line-height:1.3}
-.stag{color:rgba(255,255,255,.65);font-size:.9rem;margin-bottom:16px;font-style:italic}
-.albl{color:rgba(255,255,255,.45);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
-.stage ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
-.stage ul li{color:rgba(255,255,255,.85);font-size:.92rem;padding-left:22px;position:relative;line-height:1.55}
-.stage ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.7rem;top:4px}
-.tbox{background:rgba(255,255,255,.12);border-radius:12px;padding:14px 18px;font-size:.87rem;color:rgba(255,255,255,.75);line-height:1.65}
-.tbox strong{color:var(--gold)}
+    .container { max-width: 860px; margin: 0 auto; }
+    .container-wide { max-width: 1100px; margin: 0 auto; }
 
-/* 90 DAYS */
-.c90{background:var(--pbg);padding:80px 28px;text-align:center}
-.c90-in{max-width:620px;margin:0 auto}
-.cimg{width:100%;border-radius:20px;max-height:250px;object-fit:cover;margin-bottom:38px;display:block}
-.c90 h2{margin-bottom:14px}
-.c90 .cs{color:var(--soft);font-size:1rem;line-height:1.65;margin-bottom:38px;max-width:460px;margin-left:auto;margin-right:auto}
-.rbox{background:#fff;border-radius:20px;padding:32px 26px;box-shadow:0 6px 28px rgba(91,45,142,.1)}
-.rbox h4{color:var(--pd);font-weight:700;margin-bottom:18px;font-size:1.05rem}
-.rbox ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.rbox ul li{display:flex;gap:12px;align-items:center;font-size:.95rem;color:var(--text);text-align:left}
-.rbox ul li::before{content:"⚡";flex-shrink:0;color:var(--gold);font-size:1.1rem}
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
 
-/* DESPUÉS — icone viola DOLCE */
-.after-list{list-style:none;display:flex;flex-direction:column;gap:14px}
-.after-list li{display:flex;align-items:center;gap:18px;padding:20px 22px;background:#fff;border:1.5px solid var(--pborder);border-radius:16px;font-size:1rem;color:var(--text);font-weight:600;line-height:1.3;box-shadow:0 2px 12px rgba(91,45,142,.06)}
-.aico{width:50px;height:50px;min-width:50px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    h2.section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
 
-/* FINAL CTA — viola dolce */
-.fcta{background:var(--p);text-align:center;padding:70px 28px}
-.fcta h2{color:#fff;margin-bottom:10px}
-.fcta p{color:rgba(255,255,255,.75);font-size:1rem;line-height:1.65;margin-bottom:8px;max-width:440px;margin-left:auto;margin-right:auto}
-.fcta .fp{font-family:"Playfair Display",serif;font-size:2.5rem;font-weight:700;color:var(--gold);margin:22px 0 30px;display:block}
+    /* ── FOR YOU SECTION ── */
+    .for-you { background: var(--cream); padding: 80px 20px; }
+    .for-you h2 { color: var(--deep-purple); }
+    .checklist { list-style: none; margin-top: 32px; display: grid; gap: 16px; }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 1.05rem; color: var(--text-body); line-height: 1.5;
+    }
+    .checklist li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
 
-/* FAQ */
-.faq{max-width:680px;margin:0 auto;padding:80px 28px}
-.faq h2{text-align:center;margin-bottom:38px}
-.fi{border:1.5px solid var(--pborder);border-radius:16px;margin-bottom:12px;overflow:hidden}
-.fq{width:100%;background:#fff;border:none;padding:20px 24px;text-align:left;font-size:.96rem;font-weight:600;color:var(--pd);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:"Inter",sans-serif}
-.fq::after{content:"∨";font-size:1.15rem;transition:transform .25s;color:var(--p)}
-.fq.open::after{transform:rotate(180deg)}
-.fa{display:none;padding:0 24px 20px;color:var(--soft);font-size:.92rem;line-height:1.8;background:#fff}
-.fa.open{display:block}
+    .cta-box {
+      margin-top: 48px;
+      background: var(--deep-purple);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+    .cta-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .cta-box .subtitle { color: var(--cream); font-size: 0.9rem; margin-bottom: 28px; }
 
-/* CLOSING */
-.clos-wrap{background:#fff;padding:80px 28px;text-align:center}
-.clos{max-width:580px;margin:0 auto}
-.clos p{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,5vw,2.1rem);color:var(--pd);font-style:italic;line-height:1.5;margin-bottom:14px}
-.clos .hl{color:var(--p)}
-.clos .tl{color:var(--gold);font-style:italic}
-.closbox{background:var(--gold);border-radius:22px;padding:46px 30px;margin-top:44px;max-width:580px;margin-left:auto;margin-right:auto}
-.closbox p{color:var(--pd);font-family:"Playfair Display",serif;font-size:1.2rem;font-style:italic;margin-bottom:28px;line-height:1.5}
+    /* ── THREE LEVELS ── */
+    .levels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 700px) { .levels-grid { grid-template-columns: 1fr; } }
+    .level-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .level-card .icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .level-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+    .level-card p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
 
-/* FOOTER */
-footer{background:var(--pd);padding:60px 28px;text-align:center}
-.fl img{width:72px;height:72px;border-radius:12px;margin-bottom:16px}
-.fl span{display:block;font-family:"Playfair Display",serif;font-size:1.4rem;color:#fff}
-.fl small{color:rgba(255,255,255,.5);font-size:.85rem}
-footer a{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:.9rem;margin:20px 0 28px;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.disc{color:rgba(255,255,255,.35);font-size:.78rem;max-width:480px;margin:0 auto 16px;line-height:1.75}
-.copy{color:rgba(255,255,255,.2);font-size:.78rem}
+    /* ── EMPATHY ── */
+    .empathy { background: var(--cream); padding: 80px 20px; }
+    .empathy h2 { color: var(--deep-purple); text-align: center; margin-bottom: 24px; }
+    .empathy p {
+      font-size: 1.05rem; color: var(--text-body); line-height: 1.8;
+      text-align: center; max-width: 700px; margin: 0 auto 16px;
+    }
+    .empathy p strong { color: var(--purple); }
 
-@media(min-width:580px){.pillars{flex-direction:row}}
+    /* ── TERESA ── */
+    .teresa { background: var(--deep-purple); padding: 80px 20px; }
+    .teresa-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      align-items: center; max-width: 860px; margin: 0 auto;
+    }
+    @media (max-width: 700px) { .teresa-inner { grid-template-columns: 1fr; text-align: center; } }
+    .teresa-img {
+      width: 100%; border-radius: 16px; object-fit: cover;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border: 2px solid rgba(201,168,76,0.3);
+    }
+    .teresa-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .teresa-text p {
+      color: rgba(255,255,255,0.8); font-size: 0.98rem; line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .teresa-sig {
+      margin-top: 24px;
+      border-top: 1px solid rgba(201,168,76,0.3);
+      padding-top: 20px;
+    }
+    .teresa-sig strong { color: var(--gold-light); display: block; font-size: 1.05rem; }
+    .teresa-sig span { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
 
-/* --- TARGETED COLOR ADJUSTMENTS: only affect the three sections you requested --- */
-/* 1) "Este proceso es para ti si…" and other .sw headings (use softer/lavender purple) */
-.sw h2 { color: var(--pl); }
-/* 2) "Esto no es otro curso de motivación." in .sp (softer heading) */
-.sp h2 { color: var(--pl); }
-/* 3) Icons in the "Después de este proceso…" and small icon circles in related sections */
-.sw .ci, .sp .pico, .sw .aico { background: var(--pl); }
-/* subtle shadow matching the softer look */
-.sw .ci, .sp .pico, .sw .aico { box-shadow: 0 6px 18px rgba(124,77,184,0.06); color: #fff }
+    /* ── METHOD BPR ── */
+    .method { background: var(--mid-purple); padding: 80px 20px; }
+    .method-intro { max-width: 700px; margin: 0 auto 40px; text-align: center; }
+    .method-intro h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,5vw,2.8rem); color: var(--white); margin-bottom: 8px; }
+    .method-intro .tagline { color: var(--gold-light); font-style: italic; margin-bottom: 24px; }
+    .method-intro p { color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.97rem; }
 
-</style>
+    .method-img {
+      width: 100%; max-width: 680px; display: block; margin: 0 auto 48px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .bpr-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; max-width: 860px; margin: 0 auto; }
+    @media (max-width: 700px) { .bpr-grid { grid-template-columns: 1fr; } }
+    .bpr-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 16px; padding: 32px 24px;
+    }
+    .bpr-letter {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--gold);
+      color: var(--deep-purple);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .bpr-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--gold-light); margin-bottom: 10px; }
+    .bpr-card p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+
+    /* ── QUÉ VIVIRÁS ── */
+    .journey { background: var(--deep-purple); padding: 80px 20px; }
+    .journey h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,5vw,2.6rem); color: var(--white); text-align: center; margin-bottom: 12px; }
+    .journey-desc { color: rgba(255,255,255,0.7); text-align: center; font-size: 0.97rem; margin-bottom: 32px; }
+    .journey-img {
+      width: 100%; max-width: 700px; display: block; margin: 0 auto 48px;
+      border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .stage { max-width: 760px; margin: 0 auto 40px; }
+    .stage-header {
+      display: flex; align-items: center; gap: 20px; margin-bottom: 20px;
+    }
+    .stage-num {
+      flex-shrink: 0;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--gold);
+      color: var(--deep-purple);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .stage-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--white);
+    }
+    .stage-body {
+      margin-left: 68px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 12px; padding: 24px;
+    }
+    .stage-body p { color: rgba(255,255,255,0.7); font-style: italic; margin-bottom: 16px; font-size: 0.95rem; }
+    .stage-body h4 { color: var(--gold-light); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+    .stage-body ul { list-style: none; display: grid; gap: 10px; }
+    .stage-body ul li {
+      color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.5;
+      padding-left: 20px; position: relative;
+    }
+    .stage-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+    .stage-key {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 10px;
+      background: rgba(201,168,76,0.1);
+      border-left: 3px solid var(--gold);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem; line-height: 1.6;
+    }
+
+    /* ── CHALLENGE ── */
+    .challenge { background: var(--mid-purple); padding: 80px 20px; text-align: center; }
+    .challenge-img {
+      width: 100%; max-width: 600px; display: block; margin: 0 auto 40px;
+      border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .challenge h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem,5vw,2.8rem);
+      color: var(--white); margin-bottom: 12px;
+    }
+    .challenge .accent { color: var(--gold-light); font-style: italic; margin-bottom: 24px; font-size: 0.97rem; }
+    .challenge-list { list-style: none; display: inline-grid; gap: 12px; text-align: left; margin-bottom: 40px; }
+    .challenge-list li {
+      color: rgba(255,255,255,0.85); font-size: 1rem;
+      padding-left: 28px; position: relative;
+    }
+    .challenge-list li::before { content: '→'; position: absolute; left: 0; color: var(--gold); }
+
+    /* ── OUTCOMES ── */
+    .outcomes { background: var(--cream); padding: 80px 20px; }
+    .outcomes h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,5vw,2.6rem); color: var(--deep-purple); text-align: center; margin-bottom: 40px; }
+    .outcomes-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+      max-width: 700px; margin: 0 auto;
+    }
+    @media (max-width: 600px) { .outcomes-grid { grid-template-columns: 1fr; } }
+    .outcome-card {
+      background: var(--white);
+      border-radius: 14px; padding: 24px;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .outcome-card p { color: var(--text-body); font-size: 0.97rem; line-height: 1.5; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(160deg, var(--deep-purple), var(--mid-purple));
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem,6vw,3.5rem);
+      color: var(--white); margin-bottom: 12px;
+    }
+    .final-cta p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 40px; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--cream); padding: 80px 20px; }
+    .faq h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem,4vw,2.4rem); color: var(--deep-purple); text-align: center; margin-bottom: 40px; }
+    .faq-item {
+      max-width: 700px; margin: 0 auto 16px;
+      border: 1px solid rgba(74,31,122,0.15);
+      border-radius: 12px; overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; background: var(--white);
+      border: none; cursor: pointer;
+      padding: 20px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      color: var(--deep-purple); text-align: left;
+    }
+    .faq-q .arrow { transition: transform 0.25s; }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a {
+      display: none; background: var(--white);
+      padding: 0 24px 20px;
+      color: var(--text-body); font-size: 0.95rem; line-height: 1.7;
+    }
+    .faq-a.open { display: block; }
+
+    /* ── CLOSING ── */
+    .closing {
+      background: var(--bg-dark);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .closing p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem,3vw,1.7rem);
+      color: var(--cream);
+      line-height: 1.7;
+      max-width: 640px; margin: 0 auto 12px;
+      font-style: italic;
+    }
+    .closing p strong { color: var(--gold-light); font-style: normal; }
+    .closing .sub { font-size: 0.95rem; color: rgba(255,255,255,0.5); font-style: normal; margin-bottom: 40px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding: 48px 20px;
+      text-align: center;
+    }
+    footer img { height: 60px; margin-bottom: 20px; }
+    footer h4 { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.1rem; margin-bottom: 4px; }
+    footer .sub { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 16px; }
+    footer a { color: var(--gold-light); text-decoration: none; font-size: 0.9rem; }
+    footer a:hover { text-decoration: underline; }
+    footer .disclaimer {
+      margin-top: 28px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      max-width: 600px; margin-left: auto; margin-right: auto;
+      line-height: 1.6;
+    }
+    footer .copy { color: rgba(255,255,255,0.25); font-size: 0.78rem; margin-top: 12px; }
+
+    /* ── DIVIDER ── */
+    .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 0 auto 32px; }
+  </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="logo"><img src="IMG/logo.png" alt="Logo"></div>
-    <div class="badge">⏱ Próximamente</div>
-    <p class="hero-q">¿Te imaginas cómo sería tu vida si dejaras de sentirte sola… <em>incluso cuando estás contigo misma?</em></p>
-    <h1 class="hero-h1"><span>REINVENTA</span><br>TU SER</h1>
-    <p class="hero-tag">Conecta contigo misma para no sentirte sola nunca más</p>
-    <p class="hero-desc">Un viaje profundo de <strong>90 días</strong> a través del <strong>Método B.P.R.</strong> para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
-    <a href="#inscripcion" class="btn-gold">💬 QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
-  </div>
-</section>
-
-<!-- PRICE -->
-<div class="pband"><div class="pt">Solo 47€</div><div class="ar">↓</div></div>
-
-<!-- PARA TI SI — bianco -->
-<div class="sw"><div class="inner">
-  <h2>Este proceso es para ti si…</h2>
-  <ul class="cl">
-    <li><span class="ci">✓</span>Te sientes sola incluso estando acompañada</li>
-    <li><span class="ci">✓</span>Te cuesta poner límites y terminas complaciendo a los demás</li>
-    <li><span class="ci">✓</span>Sientes que no eres suficiente</li>
-    <li><span class="ci">✓</span>Repites relaciones o situaciones que te drenan</li>
-    <li><span class="ci">✓</span>Tu cuerpo expresa lo que no logras decir</li>
-    <li><span class="ci">✓</span>Sabes que hay algo más en ti… pero no sabes cómo acceder</li>
-  </ul>
-</div></div>
-
-<!-- CTA MID -->
-<div class="ctab" id="inscripcion">
-  <h3>REINVENTA TU SER</h3>
-  <p class="sub">Asegura tu lugar hoy</p>
-  <span class="pr">Solo 47€</span>
-  <a href="#" class="btn-gold">💬 QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
-</div>
-
-<!-- NOT MOTIVATION — lavanda -->
-<div class="sp"><div class="inner">
-  <h2>Esto no es otro curso de motivación.</h2>
-  <p style="color:var(--soft);font-size:1.05rem;line-height:1.8;margin-bottom:36px">Es un proceso estructurado donde vas a trabajar en tres niveles fundamentales de tu ser:</p>
-  <div class="pillars">
-    <div class="pill"><div class="pico">❤️</div><h4>Tu cuerpo</h4><p>(biología)</p></div>
-    <div class="pill"><div class="pico">🧠</div><h4>Tu mente</h4><p>(programación)</p></div>
-    <div class="pill"><div class="pico">✨</div><h4>Tu intuición</h4><p>(conexión interna)</p></div>
-  </div>
-  <div class="quote">Porque no puedes cambiar tu vida… si no cambias lo que la está creando desde dentro.</div>
-</div></div>
-
-<!-- YEARS — bianco -->
-<div class="sw"><div class="inner">
-  <h2>Durante años has intentado sentirte mejor…</h2>
-  <p style="color:var(--soft);line-height:1.85;margin-bottom:16px">leyendo libros, escuchando consejos, intentando "pensar positivo", adaptándote para ser aceptada.</p>
-  <p style="color:var(--pd);font-weight:700;font-size:1.05rem;margin-bottom:16px;line-height:1.6">Pero el vacío vuelve. La soledad vuelve. La inseguridad vuelve.</p>
-  <p style="color:var(--soft);line-height:1.85">Porque el problema no está afuera. Está en lo que no has sanado, reprogramado o escuchado dentro de ti.</p>
-  <div class="hbox">
-    <h3>No necesitas hacer más.<br>Necesitas hacer diferente.</h3>
-    <p>No se trata de llenarte de información. Se trata de transformar la raíz de lo que sientes.</p>
-  </div>
-</div></div>
-
-<!-- TERESA — lavanda -->
-<div class="sp"><div class="inner-c">
-  <div class="t-photo"><img src="teresa.jpg" alt="Teresa Estay Luke"></div>
-  <h2>Yo también me sentí así.</h2>
-  <p class="t-role">Teresa Estay Luke · Terapeuta Holística – Consciencia con Amor</p>
-  <div class="teresa-txt">
-    <p>Hubo un momento en mi vida donde me sentía perdida, insegura… y mi cuerpo empezó a manifestarlo.</p>
-    <p>Me olvidé de mí misma intentando encajar, agradar, sostener todo.</p>
-    <p><strong>Hasta que entendí algo clave: No estaba rota. Estaba desconectada.</strong></p>
-    <p>Y esa desconexión tenía una lógica.</p>
-    <p><strong>No fue casualidad que cambiara. Fue el resultado de aplicar un método.</strong></p>
+  <!-- LOADER -->
+  <div id="loader">
+    <span class="loader-text">Cargando...</span>
   </div>
 
-  <!-- NOTA: il blocco BPR originale è stato rimosso da qui e reinserito unificato più sotto -->
-</div></div>
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
 
-<!-- BPR BLOCK UNIFICATO: banner + 3 card in unico contenitore con sfondo IMG/secondo.jpg -->
-<div class="bpr-block" aria-labelledby="bpr-title">
-  <div class="bpr-inner">
-    <div class="bpr-ban" role="region" aria-labelledby="bpr-title">
-      <h3 id="bpr-title">Mi Método B.P.R.</h3>
-      <p class="bs">La tríada que transformó mi vida</p>
-      <p>No te voy a dar solo consejos. Te voy a enseñar el mismo método que me permitió: sanar mi cuerpo, reprogramar mi mente, despertar mi intuición.</p>
+      <div class="logo-wrap">
+        <!-- Logo Consciencia con Amor - reemplaza src con el logo real -->
+        <img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Consciencia con Amor Logo" />
+      </div>
+
+      <h1>¿Te imaginas cómo sería tu vida si dejaras de sentirte sola…incluso cuando estás contigo misma?</h1>
+
+      <div class="hero-title">REINVENTA TU SER</div>
+
+      <p class="hero-subtitle">Conecta contigo misma para no sentirte sola nunca más</p>
+      <p class="hero-desc">Un viaje profundo de 90 días a través del Método B.P.R. para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
+
+      <a href="#cta" class="btn-primary">QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
+      <p class="price-note">Solo 47€</p>
     </div>
+  </section>
 
-    <div class="bpr-sec" role="list">
-      <div class="bcards">
-        <div class="bcard" role="listitem">
-          <div class="bl">B</div>
-          <div>
-            <h4>Biodecodificación</h4>
-            <p>Sanar el cuerpo y liberar el pasado emocional</p>
-          </div>
+  <!-- ═══════════════════════════════════ FOR YOU ═══════════════════════════════════ -->
+  <section class="for-you" id="para-ti">
+    <div class="container">
+      <div class="section-label">Este proceso es para ti si…</div>
+      <ul class="checklist">
+        <li>Te sientes sola incluso estando acompañada</li>
+        <li>Te cuesta poner límites y terminas complaciendo a los demás</li>
+        <li>Sientes que no eres suficiente</li>
+        <li>Repites relaciones o situaciones que te drenan</li>
+        <li>Tu cuerpo expresa lo que no logras decir</li>
+        <li>Sabes que hay algo más en ti… pero no sabes cómo acceder</li>
+      </ul>
+
+      <div class="cta-box" id="cta">
+        <h3>REINVENTA TU SER</h3>
+        <p class="subtitle">Asegura tu lugar hoy - Solo 47€</p>
+        <a href="#" class="btn-primary">QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ THREE LEVELS ═══════════════════════════════════ -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label" style="display:block;text-align:center;">El proceso</div>
+      <h2 class="section-title" style="text-align:center;color:var(--white);">Esto no es otro curso de motivación.</h2>
+      <p style="text-align:center;color:rgba(255,255,255,0.75);margin-bottom:12px;line-height:1.7;">
+        Es un proceso estructurado donde vas a trabajar en tres niveles fundamentales de tu ser:
+      </p>
+
+      <div class="levels-grid">
+        <div class="level-card">
+          <div class="icon">🫀</div>
+          <h3>Tu cuerpo</h3>
+          <p>(biología)</p>
         </div>
-
-        <div class="bcard" role="listitem">
-          <div class="bl">P</div>
-          <div>
-            <h4>Programación Neurolingüística</h4>
-            <p>Reprogramar tu mente, tu lenguaje y tu identidad</p>
-          </div>
+        <div class="level-card">
+          <div class="icon">🧠</div>
+          <h3>Tu mente</h3>
+          <p>(programación)</p>
         </div>
+        <div class="level-card">
+          <div class="icon">✨</div>
+          <h3>Tu intuición</h3>
+          <p>(conexión interna)</p>
+        </div>
+      </div>
 
-        <div class="bcard" role="listitem">
-          <div class="bl">R</div>
-          <div>
-            <h4>Registros e Intuición</h4>
-            <p>Conectar con tu sabiduría interior y tu guía profunda</p>
-          </div>
+      <p style="text-align:center;margin-top:36px;color:rgba(255,255,255,0.65);font-style:italic;line-height:1.7;">
+        Porque no puedes cambiar tu vida… si no cambias lo que la está creando desde dentro.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ EMPATHY ═══════════════════════════════════ -->
+  <section class="empathy">
+    <div class="container">
+      <h2 class="section-title" style="color:var(--deep-purple);text-align:center;">Durante años has intentado sentirte mejor…</h2>
+      <div class="gold-divider"></div>
+      <p>
+        leyendo libros, escuchando consejos, intentando "pensar positivo", adaptándote para ser aceptada.
+      </p>
+      <p>
+        Pero el vacío vuelve. La soledad vuelve. La inseguridad vuelve.
+      </p>
+      <p>
+        Porque el problema no está afuera. Está en lo que no has sanado, reprogramado o escuchado dentro de ti.
+      </p>
+
+      <p style="margin-top:40px;font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--purple);text-align:center;font-weight:600;">
+        No necesitas hacer más. Necesitas hacer diferente.
+      </p>
+      <p>
+        No se trata de llenarte de información. Se trata de transformar la raíz de lo que sientes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ TERESA ═══════════════════════════════════ -->
+  <section class="teresa">
+    <div class="teresa-inner">
+      <div>
+        <img
+          class="teresa-img"
+          src="https://carlosalchimista.github.io/Despertar/IMG/teresa.jpg"
+          alt="Teresa Estay Luke - Terapeuta Holística y creadora de Consciencia con Amor"
+        />
+      </div>
+      <div class="teresa-text">
+        <h2>Yo también me sentí así.</h2>
+        <p>Hubo un momento en mi vida donde me sentía perdida, insegura… y mi cuerpo empezó a manifestarlo.</p>
+        <p>Me olvidé de mí misma intentando encajar, agradar, sostener todo.</p>
+        <p>Hasta que entendí algo clave: <strong style="color:var(--gold-light);">No estaba rota. Estaba desconectada.</strong></p>
+        <p>Y esa desconexión tenía una lógica.</p>
+        <p>No fue casualidad que cambiara. Fue el resultado de aplicar un método.</p>
+        <div class="teresa-sig">
+          <strong>Teresa Estay Luke</strong>
+          <span>Terapeuta Holística - Consciencia con Amor</span>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- QUÉ VIVIRÁS + STAGES — bianco -->
-<div class="qvs"><div class="inner">
-  <h2 style="text-align:center">Qué vivirás dentro</h2>
-  <p style="text-align:center;color:var(--soft);margin-bottom:44px">Durante 90 días vas a atravesar un proceso estructurado en 3 etapas:</p>
-  <img class="simg" src="https://cdn.abacus.ai/images/e888b4dc-f522-4fee-968d-e1870b59443c.jpg" alt="90 días">
-  <div class="stage">
-    <div class="snt"><div class="sn">1</div><h3>BIOLOGÍA – SANAR LA RAÍZ</h3></div>
-    <p class="stag">Tu cuerpo no está fallando. Está hablando.</p>
-    <p class="albl">Aprenderás a:</p>
-    <ul><li>Identificar el origen emocional de tus bloqueos</li><li>Entender lo que tu cuerpo expresa</li><li>Dejar de adaptarte para ser aceptada</li></ul>
-    <div class="tbox"><strong>✨ Práctica clave:</strong> Mapa de tus silencios</div>
-  </div>
-  <div class="stage">
-    <div class="snt"><div class="sn">2</div><h3>PROGRAMACIÓN – CAMBIAR EL SOFTWARE</h3></div>
-    <p class="stag">Tu mente está programada… y puedes reescribirla.</p>
-    <p class="albl">Aprenderás a:</p>
-    <ul><li>Cambiar tu diálogo interno</li><li>Eliminar creencias de "no soy suficiente"</li><li>Construir una nueva identidad</li></ul>
-    <div class="tbox"><strong>🛠️ Herramientas:</strong> Afirmaciones conscientes, trabajo con espejo, creación de tu Código de Identidad</div>
-  </div>
-  <div class="stage">
-    <div class="snt"><div class="sn">3</div><h3>REGISTROS – DESPERTAR TU INTUICIÓN</h3></div>
-    <p class="stag">Tu intuición no está perdida. Está silenciada.</p>
-    <p class="albl">Aprenderás a:</p>
-    <ul><li>Elevar tu energía y tu estado interno</li><li>Conectar con tu sabiduría profunda</li><li>Manifestar desde coherencia</li></ul>
-    <div class="tbox"><strong>🌟 Prácticas:</strong> Escritura intuitiva, conexión interna, diseño de entorno de alta vibración</div>
-  </div>
-</div></div>
+  <!-- ═══════════════════════════════════ METHOD BPR ═══════════════════════════════════ -->
+  <section class="method">
+    <div class="method-intro">
+      <div class="section-label">El método</div>
+      <h2>Mi Método B.P.R.</h2>
+      <p class="tagline">La tríada que transformó mi vida</p>
+      <p>No te voy a dar solo consejos. Te voy a enseñar el mismo método que me permitió: sanar mi cuerpo, reprogramar mi mente, despertar mi intuición</p>
+    </div>
 
-<!-- 90 DAYS — lavanda -->
-<div class="c90"><div class="c90-in">
-  <img class="cimg" src="https://cdn.abacus.ai/images/7f3c9a20-f3d4-4fef-a611-171c04c8b99b.png" alt="Reto 90 días">
-  <h2>EL RETO DE LOS 90 DÍAS</h2>
-  <p class="cs">Aquí es donde todo se integra. No es teoría. Es transformación aplicada.</p>
-  <div class="rbox">
-    <h4>Vas a crear:</h4>
-    <ul><li>Nuevos hábitos</li><li>Una nueva relación contigo</li><li>Una nueva forma de vivir</li></ul>
-  </div>
-</div></div>
+    <img
+      class="method-img"
+      src="https://carlosalchimista.github.io/Despertar/IMG/segundo.jpg"
+      alt="Método B.P.R. visualización"
+    />
 
-<!-- DESPUÉS — bianco, icone viola DOLCE -->
-<div class="sw"><div class="inner">
-  <h2>Después de este proceso…</h2>
-  <ul class="after-list">
-    <li><span class="aico">❤️</span>Dejarás de sentirte sola contigo misma</li>
-    <li><span class="aico">🎯</span>Tendrás claridad interna</li>
-    <li><span class="aico">✨</span>Confiarás en tu intuición</li>
-    <li><span class="aico">🛡️</span>Dejarás de adaptarte para ser aceptada</li>
-    <li><span class="aico">⭐</span>Empezarás a vivir desde tu verdad</li>
-  </ul>
-</div></div>
+    <div class="bpr-grid">
+      <div class="bpr-card">
+        <div class="bpr-letter">B</div>
+        <h3>Biodecodificación</h3>
+        <p>Sanar el cuerpo y liberar el pasado emocional</p>
+      </div>
+      <div class="bpr-card">
+        <div class="bpr-letter">P</div>
+        <h3>Programación Neurolingüística</h3>
+        <p>Reprogramar tu mente, tu lenguaje y tu identidad</p>
+      </div>
+      <div class="bpr-card">
+        <div class="bpr-letter">R</div>
+        <h3>Registros e Intuición</h3>
+        <p>Conectar con tu sabiduría interior y tu guía profunda</p>
+      </div>
+    </div>
+  </section>
 
-<!-- FINAL CTA — viola DOLCE -->
-<div class="fcta">
-  <h2>REINVENTA TU SER</h2>
-  <p>Empieza hoy tu proceso de transformación</p>
-  <span class="fp">Solo 47€</span>
-  <a href="#" class="btn-gold">💬 QUIERO EMPEZAR AHORA</a>
-</div>
+  <!-- ═══════════════════════════════════ QUÉ VIVIRÁS ═══════════════════════════════════ -->
+  <section class="journey">
+    <div class="container">
+      <h2>Qué vivirás dentro</h2>
+      <p class="journey-desc">Durante 90 días vas a atravesar un proceso estructurado en 3 etapas:</p>
 
-<!-- FAQ — bianco -->
-<div class="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="fi"><button class="fq" onclick="tf(this)">¿Y si ya he probado muchas cosas?</button><div class="fa">Este proceso es diferente porque no trabaja solo en la superficie. El Método B.P.R. actúa en los tres niveles donde se origina el cambio real: tu biología, tu programación mental y tu conexión interna.</div></div>
-  <div class="fi"><button class="fq" onclick="tf(this)">¿Necesito experiencia previa?</button><div class="fa">No necesitas ninguna experiencia previa. El proceso está diseñado para guiarte paso a paso, desde el principio, sin importar desde dónde partes.</div></div>
-  <div class="fi"><button class="fq" onclick="tf(this)">¿Esto es espiritual o técnico?</button><div class="fa">Es ambos. El Método B.P.R. combina herramientas concretas y prácticas (NLP, biodecodificación) con una dimensión más profunda de conexión interna y despertar de la intuición.</div></div>
-</div>
+      <img
+        class="journey-img"
+        src="https://cdn.abacus.ai/images/e888b4dc-f522-4fee-968d-e1870b59443c.jpg"
+        alt="90-day transformation journey"
+      />
 
-<!-- CLOSING — bianco -->
-<div class="clos-wrap">
-  <div class="clos">
-    <p>La soledad que sientes… no es porque estés sola.</p>
-    <p>Es porque <span class="hl">no estás completamente contigo.</span></p>
-    <p class="tl">Y eso… se puede transformar.</p>
-  </div>
-  <div class="closbox">
-    <p>Este puede ser el inicio de tu nueva relación contigo misma.</p>
-    <a href="#" class="btn-purple">💬 QUIERO REINVENTARME</a>
-  </div>
-</div>
+      <!-- STAGE 1 -->
+      <div class="stage">
+        <div class="stage-header">
+          <div class="stage-num">1</div>
+          <h3>BIOLOGÍA – SANAR LA RAÍZ</h3>
+        </div>
+        <div class="stage-body">
+          <p>Tu cuerpo no está fallando. Está hablando.</p>
+          <h4>Aprenderás a:</h4>
+          <ul>
+            <li>Identificar el origen emocional de tus bloqueos</li>
+            <li>Entender lo que tu cuerpo expresa</li>
+            <li>Dejar de adaptarte para ser aceptada</li>
+          </ul>
+          <div class="stage-key">✨ Práctica clave: Mapa de tus silencios</div>
+        </div>
+      </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="fl">
-    <img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Logo">
-    <span>Consciencia con Amor</span>
-    <small>Teresa Estay Luke · Terapeuta Holística</small>
-  </div>
-  <a href="https://www.instagram.com/consciencia_con_amor" target="_blank">📸 @consciencia_con_amor</a>
-  <p class="disc">Disclaimer: Este processo es educativo y no sustituye acompañamiento médico o psicológico. Los resultados dependen del compromiso personal con el proceso.</p>
-  <p class="copy">© 2026 Consciencia con Amor. Todos los derechos reservados.</p>
-</footer>
+      <!-- STAGE 2 -->
+      <div class="stage">
+        <div class="stage-header">
+          <div class="stage-num">2</div>
+          <h3>PROGRAMACIÓN – CAMBIAR EL SOFTWARE</h3>
+        </div>
+        <div class="stage-body">
+          <p>Tu mente está programada… y puedes reescribirla.</p>
+          <h4>Aprenderás a:</h4>
+          <ul>
+            <li>Cambiar tu diálogo interno</li>
+            <li>Eliminar creencias de 'no soy suficiente'</li>
+            <li>Construir una nueva identidad</li>
+          </ul>
+          <div class="stage-key">🛠️ Herramientas: Afirmaciones conscientes, trabajo con espejo, creación de tu Código de Identidad</div>
+        </div>
+      </div>
 
-<script>
-function tf(b){
-  var a=b.nextElementSibling,o=a.classList.contains("open");
-  document.querySelectorAll(".fa").forEach(function(x){x.classList.remove("open")});
-  document.querySelectorAll(".fq").forEach(function(x){x.classList.remove("open")});
-  if(!o){a.classList.add("open");b.classList.add("open")}
-}
-</script>
+      <!-- STAGE 3 -->
+      <div class="stage">
+        <div class="stage-header">
+          <div class="stage-num">3</div>
+          <h3>REGISTROS – DESPERTAR TU INTUICIÓN</h3>
+        </div>
+        <div class="stage-body">
+          <p>Tu intuición no está perdida. Está silenciada.</p>
+          <h4>Aprenderás a:</h4>
+          <ul>
+            <li>Elevar tu energía y tu estado interno</li>
+            <li>Conectar con tu sabiduría profunda</li>
+            <li>Manifestar desde coherencia</li>
+          </ul>
+          <div class="stage-key">🌟 Prácticas: Escritura intuitiva, conexión interna, diseño de entorno de alta vibración</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CHALLENGE ═══════════════════════════════════ -->
+  <section class="challenge">
+    <div class="container">
+      <img
+        class="challenge-img"
+        src="https://cdn.abacus.ai/images/7f3c9a20-f3d4-4fef-a611-171c04c8b99b.png"
+        alt="Transformation meditation"
+      />
+      <div class="section-label" style="color:var(--gold-light);">La integración</div>
+      <h2>EL RETO DE LOS 90 DÍAS</h2>
+      <p class="accent">Aquí es donde todo se integra. No es teoría. Es transformación aplicada.</p>
+      <p style="color:rgba(255,255,255,0.7);margin-bottom:20px;">Vas a crear:</p>
+      <ul class="challenge-list">
+        <li>Nuevos hábitos</li>
+        <li>Una nueva relación contigo</li>
+        <li>Una nueva forma de vivir</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ OUTCOMES ═══════════════════════════════════ -->
+  <section class="outcomes">
+    <div class="container">
+      <h2>Después de este proceso…</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card"><p>Dejarás de sentirte sola contigo misma</p></div>
+        <div class="outcome-card"><p>Tendrás claridad interna</p></div>
+        <div class="outcome-card"><p>Confiarás en tu intuición</p></div>
+        <div class="outcome-card"><p>Dejarás de adaptarte para ser aceptada</p></div>
+        <div class="outcome-card" style="grid-column: 1 / -1;"><p>Empezarás a vivir desde tu verdad</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FINAL CTA ═══════════════════════════════════ -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="section-label" style="color:var(--gold-light);">Empieza hoy</div>
+      <h2>REINVENTA TU SER</h2>
+      <p>Empieza hoy tu proceso de transformación</p>
+      <a href="#" class="btn-primary">QUIERO EMPEZAR AHORA</a>
+      <p class="price-note" style="margin-top:16px;">Solo 47€</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FAQ ═══════════════════════════════════ -->
+  <section class="faq">
+    <div class="container">
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Y si ya he probado muchas cosas?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Este proceso trabaja desde la raíz, no desde la superficie. Lo que diferencia el Método B.P.R. es que integra cuerpo, mente e intuición de forma simultánea, no por separado.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Necesito experiencia previa?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          No. Este proceso está diseñado para acompañarte desde donde estás ahora. No importa si nunca has trabajado en desarrollo personal o terapia.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Esto es espiritual o técnico?
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Es ambas cosas integradas. La Biodecodificación y la PNL son herramientas con base científica. Los Registros Intuitivos conectan con tu sabiduría interior. Juntos forman una tríada completa.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CLOSING ═══════════════════════════════════ -->
+  <section class="closing">
+    <div class="container">
+      <p>La soledad que sientes… no es porque estés sola.</p>
+      <p>Es porque <strong>no estás completamente contigo.</strong></p>
+      <p class="sub">Y eso… se puede transformar.</p>
+      <p style="font-family:'Inter',sans-serif;font-size:0.97rem;color:rgba(255,255,255,0.6);font-style:normal;margin-bottom:36px;">
+        Este puede ser el inicio de tu nueva relación contigo misma.
+      </p>
+      <a href="#cta" class="btn-primary">QUIERO REINVENTARME</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer>
+    <img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Consciencia con Amor Logo" />
+    <h4>Consciencia con Amor</h4>
+    <p class="sub">Teresa Estay Luke - Terapeuta Holística</p>
+    <a href="https://www.instagram.com/consciencia_con_amor" target="_blank">@consciencia_con_amor</a>
+    <p class="disclaimer">
+      <strong>Disclaimer:</strong> Este proceso es educativo y no sustituye acompañamiento médico o psicológico. Los resultados dependen del compromiso personal con el proceso.
+    </p>
+    <p class="copy">© 2026 Consciencia con Amor. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hidden');
+      }, 600);
+    });
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+  </script>
 </body>
 </html>
