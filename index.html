@@ -70,15 +70,16 @@
       position: absolute; inset: 0;
       background-image: url('https://carlosalchimista.github.io/Despertar/IMG/primo.jpg');
       background-size: cover; background-position: center;
-      filter: brightness(0.45);
+      filter: brightness(0.80); /* Versione Chiara */
     }
     .hero-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(180deg,
-        rgba(30,10,53,0.25) 0%,
-        rgba(30,10,53,0.55) 60%,
-        rgba(21,8,32,0.95) 100%);
+        rgba(30,10,53,0.12) 0%,
+        rgba(30,10,53,0.30) 60%,
+        rgba(21,8,32,0.65) 100%);
     }
+    .hero h1, .hero-title { text-shadow: 0 4px 20px rgba(0,0,0,0.5); } /* Più ombra per leggere bene il testo */
     .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
 
     .logo-wrap { margin-bottom: 32px; }
