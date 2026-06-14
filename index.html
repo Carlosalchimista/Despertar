@@ -21,11 +21,11 @@
 body{font-family:"Inter",sans-serif;color:var(--text);overflow-x:hidden;background:#fff}
 
 /* HERO */
-.hero{position:relative;background:#fff;padding:110px 28px 80px;text-align:center;overflow:visible}
-.hero-bg{position:absolute;left:50%;top:50%;transform:translate(-50%,-8%);width:min(1200px,calc(100% - 120px));height:480px;z-index:0;border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(16,8,40,.08)}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,30,0.12),rgba(20,10,30,0.18));pointer-events:none}
-.hero-content{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:40px 16px}
+.hero{position:relative;background:#fff;padding:120px 28px 80px;text-align:center;overflow:visible}
+.hero-bg{position:absolute;left:50%;top:140px;transform:translateX(-50%);width:min(1200px,calc(100% - 120px));height:520px;z-index:0;border-radius:18px;overflow:hidden;box-shadow:0 22px 60px rgba(16,8,40,.08)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,30,0.06),rgba(20,10,30,0.12));pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:20px 16px}
 .logo{margin-bottom:32px}
 .logo img{width:88px;height:88px;border-radius:14px;box-shadow:0 6px 30px rgba(0,0,0,.12)}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);color:var(--pd);border-radius:30px;padding:9px 22px;font-size:.85rem;margin-bottom:22px;border:1px solid rgba(0,0,0,.04)}
@@ -35,6 +35,11 @@ body{font-family:"Inter",sans-serif;color:var(--text);overflow-x:hidden;backgrou
 .hero-tag{color:var(--pd);font-size:clamp(.95rem,2.5vw,1.1rem);max-width:640px;line-height:1.7;margin-bottom:14px}
 .hero-desc{color:var(--soft);font-size:.95rem;max-width:620px;line-height:1.9;margin-bottom:28px}
 .hero-desc strong{color:var(--gold);font-weight:600}
+@media(max-width:900px){
+  .hero{padding:100px 18px 60px}
+  .hero-bg{top:200px;height:420px;width:calc(100% - 48px)}
+  .hero-h1{font-size:clamp(2rem,8vw,3.8rem)}
+}
 
 /* BOTTONI */
 .btn-gold{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--pd);font-weight:700;font-size:.95rem;padding:17px 36px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
@@ -85,21 +90,24 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,5.5vw,2.7rem);col
 .teresa-txt p{color:var(--soft);font-size:1rem;line-height:1.9;margin-bottom:14px}
 .teresa-txt p strong{color:var(--pd)}
 
-/* BPR BANNER — viola dolce */
-.bpr-ban{background:var(--p);border-radius:22px;padding:46px 30px;text-align:center;margin-top:44px}
-.bpr-ban h3{font-family:"Playfair Display",serif;font-size:2.2rem;color:#fff;margin-bottom:8px}
-.bpr-ban .bs{color:rgba(255,255,255,.65);margin-bottom:18px}
-.bpr-ban p{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.75}
-
-/* BPR CARDS — viola dolce */
-.bpr-sec{background:var(--p);padding:60px 28px}
+/* BPR SECTION — background image for Method B.P.R. only */
+.bpr-sec{position:relative;padding:60px 28px;background:transparent}
+.bpr-sec::before{content:"";position:absolute;inset:0;background-image:url("IMG/secondo.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;filter:contrast(0.98) saturate(1.05);opacity:1;z-index:0;border-radius:18px}
+.bpr-sec .bpr-inner{position:relative;z-index:2;max-width:960px;margin:0 auto;padding:48px;background:rgba(8,6,18,0.18);backdrop-filter:blur(4px);border-radius:14px}
+.bpr-ban{background:transparent;border-radius:12px;padding:22px 18px;text-align:center;margin-bottom:22px}
+.bpr-ban h3{font-family:"Playfair Display",serif;font-size:2rem;color:#fff;margin-bottom:6px}
+.bpr-ban .bs{color:rgba(255,255,255,.9);margin-bottom:12px}
+.bpr-ban p{color:rgba(255,255,255,.9);font-size:.98rem;line-height:1.65}
 .bpr-sec h2{color:#fff}
-.bpr-sec .ms{color:rgba(255,255,255,.6);margin-bottom:44px;text-align:center}
+.bpr-sec .ms{color:rgba(255,255,255,.9);margin-bottom:24px;text-align:center}
 .bcards{display:flex;flex-direction:column;gap:18px;max-width:680px;margin:0 auto}
-.bcard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:28px 24px;display:flex;gap:20px;align-items:flex-start;text-align:left}
+.bcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px 24px;display:flex;gap:20px;align-items:flex-start;text-align:left}
 .bl{width:52px;height:52px;min-width:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:700;color:var(--pd)}
 .bcard h4{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:7px}
-.bcard p{color:rgba(255,255,255,.65);font-size:.9rem;line-height:1.65}
+.bcard p{color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.65}
+@media(max-width:900px){
+  .bpr-sec .bpr-inner{padding:28px}
+}
 
 /* QUE VIVIRÁS — bianco */
 .qvs{background:#fff;padding:60px 28px}
@@ -177,16 +185,14 @@ footer a:hover{text-decoration:underline}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img class="hero-img" src="IMG/primo.jpg" alt="Fondo"></div>
-  <div class="hero-content">
-    <div class="logo"><img src="IMG/logo.png" alt="Logo"></div>
-    <div class="badge">⏱ Próximamente</div>
-    <p class="hero-q">¿Te imaginas cómo sería tu vida si dejaras de sentirte sola… <em>incluso cuando estás contigo misma?</em></p>
-    <h1 class="hero-h1"><span>REINVENTA</span><br>TU SER</h1>
-    <p class="hero-tag">Conecta contigo misma para no sentirte sola nunca más</p>
-    <p class="hero-desc">Un viaje profundo de <strong>90 días</strong> a través del <strong>Método B.P.R.</strong> para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
-    <a href="#inscripcion" class="btn-gold">💬 QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
-  </div>
+  <div class="hero-bg"></div><div class="hero-ov"></div>
+  <div class="logo"><img src="https://cdn.abacus.ai/images/d92b9fd6-000b-4d3f-b6d5-bc74d2d5ae7c.png" alt="Logo"></div>
+  <div class="badge">⏱ Próximamente</div>
+  <p class="hero-q">¿Te imaginas cómo sería tu vida si dejaras de sentirte sola… <em>incluso cuando estás contigo misma?</em></p>
+  <h1 class="hero-h1"><span>REINVENTA</span><br>TU SER</h1>
+  <p class="hero-tag">Conecta contigo misma para no sentirte sola nunca más</p>
+  <p class="hero-desc">Un viaje profundo de <strong>90 días</strong> a través del <strong>Método B.P.R.</strong> para sanar tu biología, reprogramar tu mente y despertar tu intuición.</p>
+  <a href="#inscripcion" class="btn-gold">💬 QUIERO EMPEZAR MI TRANSFORMACIÓN</a>
 </section>
 
 <!-- PRICE -->
@@ -249,20 +255,21 @@ footer a:hover{text-decoration:underline}
     <p>Y esa desconexión tenía una lógica.</p>
     <p><strong>No fue casualidad que cambiara. Fue el resultado de aplicar un método.</strong></p>
   </div>
-  <!-- BPR BANNER viola DOLCE -->
-  <div class="bpr-ban">
-    <h3>Mi Método B.P.R.</h3>
-    <p class="bs">La tríada que transformó mi vida</p>
-    <p>No te voy a dar solo consejos. Te voy a enseñar el mismo método que me permitió: sanar mi cuerpo, reprogramar mi mente, despertar mi intuición</p>
-  </div>
 </div></div>
 
-<!-- BPR CARDS — viola dolce (continua dal banner) -->
+<!-- BPR SECTION — unified banner + cards -->
 <div class="bpr-sec">
-  <div class="bcards">
-    <div class="bcard"><div class="bl">B</div><div><h4>Biodecodificación</h4><p>Sanar el cuerpo y liberar el pasado emocional</p></div></div>
-    <div class="bcard"><div class="bl">P</div><div><h4>Programación Neurolingüística</h4><p>Reprogramar tu mente, tu lenguaje y tu identidad</p></div></div>
-    <div class="bcard"><div class="bl">R</div><div><h4>Registros e Intuición</h4><p>Conectar con tu sabiduría interior y tu guía profunda</p></div></div>
+  <div class="bpr-inner">
+    <div class="bpr-ban">
+      <h3>Mi Método B.P.R.</h3>
+      <p class="bs">La tríada que transformó mi vida</p>
+      <p>No te voy a dar solo consejos. Te voy a enseñar el mismo método que me permitió: sanar mi cuerpo, reprogramar mi mente, despertar mi intuición</p>
+    </div>
+    <div class="bcards">
+      <div class="bcard"><div class="bl">B</div><div><h4>Biodecodificación</h4><p>Sanar el cuerpo y liberar el pasado emocional</p></div></div>
+      <div class="bcard"><div class="bl">P</div><div><h4>Programación Neurolingüística</h4><p>Reprogramar tu mente, tu lenguaje y tu identidad</p></div></div>
+      <div class="bcard"><div class="bl">R</div><div><h4>Registros e Intuición</h4><p>Conectar con tu sabiduría interior y tu guía profunda</p></div></div>
+    </div>
   </div>
 </div>
 
